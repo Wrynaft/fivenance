@@ -293,61 +293,93 @@ class _HomeState extends State<Home> {
       ),
     );
   }
+}
 
-  Widget buildPage(String imageUrl, String title, String date) {
-    return Container(
-      margin: EdgeInsets.only(left: 5),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(30),
-        child: Stack(
-          children: [
-            Image.asset(
-              imageUrl,
-              fit: BoxFit.cover,
-              height: 370,
-              width: 390,
-            ),
-            Positioned.fill(
-              child: DecoratedBox(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.bottomCenter,
-                    end: Alignment.topCenter,
-                    colors: [
-                      Color.fromRGBO(41, 117, 89, 1).withOpacity(0.7),
-                      Colors.transparent,
-                    ],
-                  ),
+Widget buildPage(String imageUrl, String title, String date) {
+  return Container(
+    margin: EdgeInsets.only(left: 5),
+    child: ClipRRect(
+      borderRadius: BorderRadius.circular(30),
+      child: Stack(
+        children: [
+          Image.asset(
+            imageUrl,
+            fit: BoxFit.cover,
+            height: 370,
+            width: 390,
+          ),
+          Positioned.fill(
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                  colors: [
+                    Color.fromRGBO(41, 117, 89, 1).withOpacity(0.7),
+                    Colors.transparent,
+                  ],
                 ),
               ),
             ),
+          ),
+          if (imageUrl == 'assets/discovery1.jpg')
             Positioned(
-              top: 150,
+              top: 100,
               left: 20,
-              child: Text(
-                title,
-                style: TextStyle(
-                  fontFamily: 'AbhayaLibre',
-                  fontSize: 33,
-                  color: Colors.white,
-                ),
+              child: Image.asset(
+                'assets/Trending.png',
+                height: 54,
+                width: 100,
               ),
             ),
+          if (imageUrl ==
+              'assets/FeaturedTraining.jpg') // Show Featured Program icon for tab 2
             Positioned(
-              top: 250,
+              top: 100,
               left: 20,
-              child: Text(
-                date,
-                style: TextStyle(
-                  fontFamily: 'AbhayaLibre-Regular',
-                  fontSize: 16,
-                  color: Color.fromARGB(215, 215, 215, 1000),
-                ),
+              child: Image.asset(
+                'assets/featuredprogramicon.png',
+                height: 54,
+                width: 160,
               ),
             ),
-          ],
-        ),
+          if (imageUrl ==
+              'assets/5nancementor.png') // Show featured image for tab 3
+            Positioned(
+              top: 100,
+              left: 20,
+              child: Image.asset(
+                'assets/featured.png',
+                height: 54,
+                width: 100,
+              ),
+            ),
+          Positioned(
+            top: 150,
+            left: 20,
+            child: Text(
+              title,
+              style: TextStyle(
+                fontFamily: 'AbhayaLibre',
+                fontSize: 33,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          Positioned(
+            top: 250,
+            left: 20,
+            child: Text(
+              date,
+              style: TextStyle(
+                fontFamily: 'AbhayaLibre-Regular',
+                fontSize: 16,
+                color: Color.fromARGB(215, 215, 215, 1000),
+              ),
+            ),
+          ),
+        ],
       ),
-    );
-  }
+    ),
+  );
 }
