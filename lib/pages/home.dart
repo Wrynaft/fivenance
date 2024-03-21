@@ -1,4 +1,9 @@
+import 'package:fivenance/pages/forum.dart';
+import 'package:fivenance/pages/mentor1.dart';
+import 'package:fivenance/pages/news.dart';
 import 'package:fivenance/pages/profile.dart';
+import 'package:fivenance/pages/training.dart';
+import 'package:fivenance/pages/dailytrivia.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -12,6 +17,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final PageController _controller = PageController();
   int _currentPage = 0;
+  bool _isLoading = false; // Track loading state
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +25,7 @@ class _HomeState extends State<Home> {
       backgroundColor: const Color(0xFF0C1C3C),
       body: Stack(
         children: [
+          // Background content
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -62,49 +69,227 @@ class _HomeState extends State<Home> {
                     });
                   },
                   itemBuilder: (context, index) {
-                    // Define the amount to translate based on the current page index
-                    double xOffset = (index - _currentPage) * 100.0;
-
-                    return Transform.translate(
-                      offset: Offset(
-                        xOffset,
-                        0.0,
-                      ),
-                      child: buildPage(
+                    if (index == 0) {
+                      return buildPage(
                         'assets/discovery1.jpg',
-                        index == 0
-                            ? 'Meta Stock\nPrice Soared by 20%'
-                            : 'Tab ${index + 1}',
+                        'Meta Stock\nPrice Soared by 20%',
                         '2 February 2024',
-                      ),
-                    );
+                      );
+                    } else if (index == 1) {
+                      return buildPage(
+                        'assets/FeaturedTraining.jpg',
+                        'FraudGuard: \nProtecting Your Finances',
+                        '25 March 2024',
+                      );
+                    } else if (index == 2) {
+                      return GestureDetector(
+                        onTap: () async {
+                          setState(() {
+                            _isLoading = true; // Start loading
+                          });
+                          await Future.delayed(
+                              Duration(seconds: 2)); // Simulating loading time
+                          setState(() {
+                            _isLoading = false; // Stop loading
+                          });
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Mentor1()),
+                          );
+                        },
+                        child: buildPage(
+                          'assets/5nancementor.png',
+                          'Join 5nance as a Mentor: \nShare Your Expertise!',
+                          '24 March 2024',
+                        ),
+                      );
+                    }
+                    return Container();
                   },
                   itemCount: 3,
                 ),
               ),
             ],
           ),
-          Positioned(
-            top: 445,
-            left: 0,
-            right: 0,
-            child: Align(
-              alignment: Alignment.center,
-              child: SmoothPageIndicator(
-                controller: _controller,
-                count: 3,
-                effect: JumpingDotEffect(
-                  activeDotColor: Color.fromRGBO(97, 255, 137, 1.000),
-                  dotColor: Color.fromRGBO(211, 255, 249, 1.000),
-                  dotHeight: 15,
-                  dotWidth: 15,
-                  spacing: 8,
-                  jumpScale: 3,
+          // Loading indicator with background
+          if (_isLoading)
+            Positioned.fill(
+              child: Container(
+                color: Colors.black.withOpacity(0.8),
+                child: Center(
+                  child: HourGlassLoadingWidget(),
                 ),
               ),
             ),
-          ),
+          // SmoothPageIndicator widget (conditionally rendered based on _isLoading)
+          if (!_isLoading)
+            Positioned(
+              top: 445,
+              left: 0,
+              right: 0,
+              child: Align(
+                alignment: Alignment.center,
+                child: SmoothPageIndicator(
+                  controller: _controller,
+                  count: 3,
+                  effect: JumpingDotEffect(
+                    activeDotColor: Color.fromRGBO(97, 255, 137, 1.000),
+                    dotColor: Color.fromRGBO(211, 255, 249, 1.000),
+                    dotHeight: 15,
+                    dotWidth: 15,
+                    spacing: 8,
+                    jumpScale: 3,
+                  ),
+                ),
+              ),
+            ),
         ],
+      ),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(bottom: 30.0, left: 20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Opacity(
+                  opacity: _isLoading
+                      ? 0.1
+                      : 1.0, // Set opacity based on loading state
+                  child: GestureDetector(
+                    child: SizedBox(
+                      height: 120,
+                      width: 160,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  Forum(), // Navigate to news page
+                            ),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: _isLoading
+                              ? Colors.black.withOpacity(0.8)
+                              : Color.fromRGBO(79, 129, 147, 1.000),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18),
+                          ),
+                        ),
+                        child: Image.asset(
+                          'assets/Forummainpage.png', // Insert your image here
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Opacity(
+                  opacity: _isLoading
+                      ? 0.1
+                      : 1.0, // Set opacity based on loading state
+                  child: GestureDetector(
+                    child: SizedBox(
+                      height: 120,
+                      width: 160,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  News(), // Navigate to news page
+                            ),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: _isLoading
+                              ? Colors.black.withOpacity(0.8)
+                              : Color.fromRGBO(61, 99, 112, 1.000),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18),
+                          ),
+                        ),
+                        child: Image.asset('assets/Newsmainpage.png'),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Opacity(
+                  opacity: _isLoading
+                      ? 0.1
+                      : 1.0, // Set opacity based on loading state
+                  child: GestureDetector(
+                    child: SizedBox(
+                      height: 120,
+                      width: 160,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  Training(), // Navigate to news page
+                            ),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: _isLoading
+                              ? Colors.black.withOpacity(0.8)
+                              : Color.fromRGBO(61, 99, 112, 1.000),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18),
+                          ),
+                        ),
+                        child:
+                            Image.asset('assets/Trainingprogrammainpage.png'),
+                      ),
+                    ),
+                  ),
+                ),
+                Opacity(
+                  opacity: _isLoading
+                      ? 0.1
+                      : 1.0, // Set opacity based on loading state
+                  child: GestureDetector(
+                    child: SizedBox(
+                      height: 120,
+                      width: 160,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  DailyTrivia(), // Navigate to news page
+                            ),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: _isLoading
+                              ? Colors.black.withOpacity(0.8)
+                              : Color.fromRGBO(79, 129, 147, 1.000),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18),
+                          ),
+                        ),
+                        child: Image.asset('assets/Dailytriviamainpage.png'),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -119,7 +304,7 @@ class _HomeState extends State<Home> {
             Image.asset(
               imageUrl,
               fit: BoxFit.cover,
-              height: 365,
+              height: 370,
               width: 390,
             ),
             Positioned.fill(
@@ -129,7 +314,7 @@ class _HomeState extends State<Home> {
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
                     colors: [
-                      Color.fromRGBO(41, 117, 89, 1).withOpacity(0.9),
+                      Color.fromRGBO(41, 117, 89, 1).withOpacity(0.7),
                       Colors.transparent,
                     ],
                   ),
