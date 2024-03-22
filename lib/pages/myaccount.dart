@@ -1,4 +1,5 @@
 import 'package:fivenance/pages/forum.dart';
+import 'package:fivenance/pages/home.dart';
 import 'package:fivenance/pages/news.dart';
 import 'package:fivenance/pages/profile.dart';
 import 'package:fivenance/pages/training.dart';
@@ -17,7 +18,7 @@ class _MyAccountState extends State<MyAccount> {
     return Scaffold(
       backgroundColor: Color(0xFF0C1C3C),
       body: Padding(
-        padding: EdgeInsets.only(top: 60, left: 25),
+        padding: EdgeInsets.only(top: 60, left: 25, right: 25),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -45,6 +46,20 @@ class _MyAccountState extends State<MyAccount> {
                     color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.normal,
+                  ),
+                ),
+                Spacer(), // Added Spacer widget to push the icon to the right
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Home()),
+                    );
+                  },
+                  child: Icon(
+                    Icons.home,
+                    color: Colors.white,
+                    size: 30,
                   ),
                 ),
               ],

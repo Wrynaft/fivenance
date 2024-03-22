@@ -69,7 +69,10 @@ class _ProfileState extends State<Profile> {
             left: 15,
             child: GestureDetector(
               onTap: () {
-                Navigator.pop(context); // Navigate back to previous screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Home()),
+                );
               },
               child: Icon(
                 Icons.arrow_back_ios,
@@ -246,11 +249,11 @@ class _ProfileState extends State<Profile> {
             child: GestureDetector(
               child: Container(
                 width: 296,
-                height: 98,
+                height: 102,
                 decoration: BoxDecoration(
                   color: Colors.transparent,
                   image: DecorationImage(
-                    image: AssetImage('assets/ProfileSummary.png'),
+                    image: AssetImage('assets/ProfileSummary1.png'),
                     fit: BoxFit.cover,
                   ),
                 ),

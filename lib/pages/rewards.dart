@@ -1,3 +1,4 @@
+import 'package:fivenance/pages/home.dart';
 import 'package:fivenance/pages/profile.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class _RewardsState extends State<Rewards> {
     return Scaffold(
       backgroundColor: Color(0xFF0C1C3C),
       body: Padding(
-        padding: EdgeInsets.only(top: 60, left: 25),
+        padding: EdgeInsets.only(top: 60, left: 25, right: 20),
         child: Row(
           children: [
             GestureDetector(
@@ -32,13 +33,27 @@ class _RewardsState extends State<Rewards> {
                 ),
               ),
             ),
-            SizedBox(width: 130),
+            SizedBox(width: 120),
             Text(
               'Rewards',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 18,
                 fontWeight: FontWeight.normal,
+              ),
+            ),
+            Spacer(),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Home()),
+                );
+              },
+              child: Icon(
+                Icons.home,
+                color: Colors.white,
+                size: 30,
               ),
             ),
           ],

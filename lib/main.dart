@@ -22,6 +22,12 @@ import 'package:fivenance/pages/goals.dart';
 import 'package:fivenance/pages/helpnsupport.dart';
 import 'package:fivenance/pages/aboutapp.dart';
 import 'package:fivenance/pages/dailytrivia.dart';
+import 'package:fivenance/pages/forumlikesrecord.dart';
+import 'package:fivenance/pages/repliesrecord.dart';
+import 'package:fivenance/pages/searchhistoryrecord.dart';
+import 'package:fivenance/pages/newsrecord.dart';
+import 'package:fivenance/pages/visitedtraining.dart';
+import 'package:fivenance/pages/triviarecord.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -49,6 +55,12 @@ void main() => runApp(MaterialApp(
         '/goals': (context) => Goals(),
         '/helpnsupport': (context) => HelpnSupport(),
         '/aboutapp': (context) => AboutApp(),
-        '/dailytrivia': (context) => DailyTrivia()
+        '/dailytrivia': (context) => DailyTrivia(),
+        '/forumlikesrecord': (context) => ForumLikesRecord(),
+        '/repliesrecord': (context) => RepliesnComments(),
+        '/searchhistoryrecord': (context) => SearchHistory(),
+        '/newsrecord': (context) => NewsRecord(),
+        '/visitedtraining': (context) => VisitedTraining(),
+        '/triviarecord': (context) => TriviaRecord()
       },
     ));

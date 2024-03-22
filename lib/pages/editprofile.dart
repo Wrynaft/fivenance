@@ -1,3 +1,4 @@
+import 'package:fivenance/pages/home.dart';
 import 'package:fivenance/pages/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:fivenance/pages/profile.dart';
@@ -110,7 +111,7 @@ class _EditProfileState extends State<EditProfile> {
                     ),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.only(top: 0, left: 25),
+                    padding: EdgeInsets.only(top: 0, left: 25, right: 25),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -133,6 +134,20 @@ class _EditProfileState extends State<EditProfile> {
                             color: Colors.white,
                             fontSize: 18,
                             fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                        Spacer(), // Added Spacer widget to push the icon to the right
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Home()),
+                            );
+                          },
+                          child: Icon(
+                            Icons.home,
+                            color: Colors.white,
+                            size: 30,
                           ),
                         ),
                       ],
@@ -227,7 +242,7 @@ class _EditProfileState extends State<EditProfile> {
                 decoration: BoxDecoration(
                   color: Colors.transparent,
                   image: DecorationImage(
-                    image: AssetImage('assets/profilepic1.png'),
+                    image: AssetImage('assets/profilepic.png'),
                     fit: BoxFit.cover,
                   ),
                 ),

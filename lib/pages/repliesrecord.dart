@@ -1,15 +1,15 @@
+import 'package:fivenance/pages/activitylog.dart';
 import 'package:fivenance/pages/home.dart';
-import 'package:fivenance/pages/profile.dart';
 import 'package:flutter/material.dart';
 
-class AboutApp extends StatefulWidget {
-  const AboutApp({super.key});
+class RepliesnComments extends StatefulWidget {
+  const RepliesnComments({super.key});
 
   @override
-  State<AboutApp> createState() => _AboutAppState();
+  State<RepliesnComments> createState() => _RepliesnCommentsState();
 }
 
-class _AboutAppState extends State<AboutApp> {
+class _RepliesnCommentsState extends State<RepliesnComments> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class _AboutAppState extends State<AboutApp> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Profile()),
+                  MaterialPageRoute(builder: (context) => ActivityLog()),
                 );
               },
               child: Transform.scale(
@@ -33,16 +33,16 @@ class _AboutAppState extends State<AboutApp> {
                 ),
               ),
             ),
-            SizedBox(width: 105),
+            SizedBox(width: 70),
             Text(
-              'About App',
+              'Replies & Comments',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 18,
                 fontWeight: FontWeight.normal,
               ),
             ),
-            Spacer(),
+            Spacer(), // Added Spacer widget to push the icon to the right
             GestureDetector(
               onTap: () {
                 Navigator.push(
