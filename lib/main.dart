@@ -1,7 +1,7 @@
 import 'package:fivenance/pages/begin.dart';
 import 'package:fivenance/pages/editprofile.dart';
 import 'package:fivenance/pages/forgotpw.dart';
-import 'package:fivenance/pages/forum.dart';
+import 'package:fivenance/pages/CreatePostPage.dart';
 import 'package:fivenance/pages/forumpage.dart';
 import 'package:fivenance/pages/get_started.dart';
 import 'package:fivenance/pages/loading.dart';
@@ -25,7 +25,7 @@ void main() => runApp(MaterialApp(
     '/begin': (context) => Begin(),
     '/editprofile': (context) => EditProfile(),
     '/forgotpw': (context) => ForgotPW(),
-    '/forum': (context) => Forum(),
+    '/CreatePostPage': (context) => CreatePostPage(),
     '/forumpage': (context) => ForumPage(),
     '/login': (context) => Login(),
     '/mentor1': (context) => Mentor1(),
@@ -37,5 +37,9 @@ void main() => runApp(MaterialApp(
     '/signup': (context) => SignUp(),
     '/training': (context) => Training(),
   },
+  theme: ThemeData(
+    fontFamily: 'AbhayaLibre', // Use the actual font family name here
+    // Define other theme properties here
+  ),
 ));
 
