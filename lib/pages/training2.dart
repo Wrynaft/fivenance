@@ -2,11 +2,10 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter/widgets.dart';
 
-<<<<<<< HEAD
-=======
+
 void main() => runApp(const MaterialApp(home: Training2()));
 
->>>>>>> origin/KhoonLyn
+
 class Training2 extends StatefulWidget {
   const Training2({super.key});
 
