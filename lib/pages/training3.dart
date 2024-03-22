@@ -33,7 +33,7 @@ class _Training3State extends State<Training3> {
                 child: Text(
                   'This Week\'s Hot Topic',
                   style: TextStyle(
-                    fontFamily: 'AbhayaLibre-ExtraBold',
+                    fontFamily: 'AbhayaLibre',
                     fontSize: 35,
                     color: Colors.white,
                   ),
@@ -72,7 +72,7 @@ class _Training3State extends State<Training3> {
                               child: Text(
                                 'Mastering the Stock Market:\nStrategies for Success',
                                 style: TextStyle(
-                                  fontFamily: 'AbhayaLibre-ExtraBold',
+                                  fontFamily: 'AbhayaLibre',
                                   fontSize: 20,
                                   color: Colors.black,
                                 ),

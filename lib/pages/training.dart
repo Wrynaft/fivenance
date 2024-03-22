@@ -215,7 +215,7 @@ class _TrainingState extends State<Training> {
                               Text(
                                 'Financial Fraud',
                                 style: TextStyle(
-                                  fontFamily: "AbhayaLibre-ExtraBold",
+                                  fontFamily: "AbhayaLibre",
                                   fontSize: 18,
                                   color: Colors.grey,
                                 ),
@@ -228,7 +228,7 @@ class _TrainingState extends State<Training> {
                               Text(
                                 'FraudGuard: Protecting\nYour Finances',
                                 style: TextStyle(
-                                  fontFamily: 'AbhayaLibre-ExtraBold',
+                                  fontFamily: 'AbhayaLibre',
                                   fontSize: 18,
                                   color: Colors.black,
                                 ),
@@ -247,7 +247,7 @@ class _TrainingState extends State<Training> {
                               Text(
                                 'Emily Johnson',
                                 style: TextStyle(
-                                  fontFamily: 'AbhayaLibre-ExtraBold',
+                                  fontFamily: 'AbhayaLibre',
                                   fontSize: 15,
                                   color: Colors.black,
                                 ),
@@ -285,7 +285,7 @@ class _TrainingState extends State<Training> {
                             Text(
                               'Finance',
                               style: TextStyle(
-                                fontFamily: "AbhayaLibre-ExtraBold",
+                                fontFamily: "AbhayaLibre",
                                 fontSize: 18,
                                 color: Colors.grey,
                               ),
@@ -298,7 +298,7 @@ class _TrainingState extends State<Training> {
                             Text(
                               'Smart Money Moves',
                               style: TextStyle(
-                                fontFamily: 'AbhayaLibre-ExtraBold',
+                                fontFamily: 'AbhayaLibre',
                                 fontSize: 20,
                                 color: Colors.black,
                               ),
@@ -367,7 +367,7 @@ class _TrainingState extends State<Training> {
                             Text(
                               'Econ101: Your Essential\nGuide to Economics',
                               style: TextStyle(
-                                fontFamily: 'AbhayaLibre-ExtraBold',
+                                fontFamily: 'AbhayaLibre',
                                 fontSize: 18,
                                 color: Colors.black,
                               ),
@@ -386,7 +386,7 @@ class _TrainingState extends State<Training> {
                             Text(
                               'James Williams',
                               style: TextStyle(
-                                fontFamily: 'AbhayaLibre-ExtraBold',
+                                fontFamily: 'AbhayaLibre',
                                 fontSize: 15,
                                 color: Colors.black,
                               ),
@@ -436,7 +436,7 @@ class _TrainingState extends State<Training> {
                             Text(
                               'From Idea to Empire:\nEntrepreneur\'s Roadmap',
                               style: TextStyle(
-                                fontFamily: 'AbhayaLibre-ExtraBold',
+                                fontFamily: 'AbhayaLibre',
                                 fontSize: 17,
                                 color: Colors.black,
                               ),
