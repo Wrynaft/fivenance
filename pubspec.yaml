@@ -79,6 +79,9 @@ flutter:
     - family: AbhayaLibre
       fonts:
         - asset: assets/fonts/AbhayaLibre-ExtraBold.ttf
+    - family: AbhayaLibre-ExtraBold
+     fonts:
+       - asset: fonts/AbhayaLibre-ExtraBold.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
