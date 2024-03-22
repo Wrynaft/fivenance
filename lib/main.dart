@@ -11,12 +11,9 @@ import 'package:fivenance/pages/mentor2.dart';
 import 'package:fivenance/pages/myaccount.dart';
 import 'package:fivenance/pages/news.dart';
 import 'package:fivenance/pages/newspage.dart';
-import 'package:fivenance/pages/newspage2.dart';
 import 'package:fivenance/pages/profile.dart';
 import 'package:fivenance/pages/signup.dart';
 import 'package:fivenance/pages/training.dart';
-import 'package:fivenance/pages/training2.dart';
-import 'package:fivenance/pages/training3.dart';
 import 'package:flutter/material.dart';
 
 
@@ -36,15 +33,9 @@ void main() => runApp(MaterialApp(
     '/myaccount': (context) => MyAccount(),
     '/news': (context) => News(),
     '/newspage': (context) => NewsPage(),
-    '/newspage2': (contex) => NewsPage2(),
     '/profile': (context) => Profile(),
     '/signup': (context) => SignUp(),
     '/training': (context) => Training(),
-    '/training2': (context) => Training2(),
-    '/training3': (context) => Training3(),
   },
 ));
-
-
-
 
