@@ -73,7 +73,9 @@ class _LoginState extends State<Login> {
             borderRadius: BorderRadius.all(Radius.circular(30))),
             margin: EdgeInsets.only(left:20, top:20, right: 20),
             child: ElevatedButton(
-            onPressed: null,
+            onPressed: (){
+              Navigator.pushNamed(context, '/home');
+            },
             style: ElevatedButton.styleFrom(backgroundColor: Colors.transparent, shadowColor: Colors.transparent),
             child: Text('Login', style: TextStyle(fontFamily: 'Judson', color: Colors.black, fontSize: 23)),)
           ),
