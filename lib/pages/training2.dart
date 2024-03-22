@@ -2,9 +2,7 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter/widgets.dart';
 
-
 void main() => runApp(const MaterialApp(home: Training2()));
-
 
 class Training2 extends StatefulWidget {
   const Training2({super.key});
@@ -24,7 +22,8 @@ class _Training2State extends State<Training2> {
             height: 200,
             width: double.infinity,
             child: Image(
-              image: NetworkImage('https://appinventiv.com/wp-content/uploads/2021/12/How-Machine-Learning-Helps-in-Financial-Fraud-Detection-in-the-FinTech-Industry-01-scaled.webp'),
+              image: NetworkImage(
+                  'https://appinventiv.com/wp-content/uploads/2021/12/How-Machine-Learning-Helps-in-Financial-Fraud-Detection-in-the-FinTech-Industry-01-scaled.webp'),
               fit: BoxFit.cover,
             ),
           ),
@@ -42,7 +41,7 @@ class _Training2State extends State<Training2> {
                       child: Text(
                         'Financial Fraud',
                         style: TextStyle(
-                          fontFamily: 'AbhayaLibre-ExtraBold',
+                          fontFamily: 'AbhayaLibre',
                           fontSize: 15,
                           color: Colors.grey,
                         ),
@@ -59,7 +58,7 @@ class _Training2State extends State<Training2> {
                         'FraudGuard:\nProtecting Your Finances',
                         style: TextStyle(
                           fontSize: 25,
-                          fontFamily: 'AbhayaLibre-ExtraBold',
+                          fontFamily: 'AbhayaLibre',
                           color: Colors.black,
                         ),
                       ),
@@ -80,7 +79,7 @@ class _Training2State extends State<Training2> {
                       child: Text(
                         '4.8 by Emily Johnson',
                         style: TextStyle(
-                          fontFamily: 'AbhayaLibre-ExtraBold',
+                          fontFamily: 'AbhayaLibre',
                           fontSize: 15,
                           color: Colors.grey,
                         ),
@@ -97,7 +96,7 @@ class _Training2State extends State<Training2> {
                     child: Text(
                       'With expert guidance and real-world examples, FraudGuard empowers participants to take proactive steps to protect their financial assets and minimize the risk of falling victim to fraud. Join us in mastering the art of financial security and safeguarding your financial future with FraudGuard: Protecting Your Finances.',
                       style: TextStyle(
-                        fontFamily: 'AbhayaLibre-ExtraBold',
+                        fontFamily: 'AbhayaLibre',
                         fontSize: 17,
                         color: Colors.black,
                       ),
@@ -117,7 +116,7 @@ class _Training2State extends State<Training2> {
                 child: Text(
                   'Lessons',
                   style: TextStyle(
-                    fontFamily: 'AbhayaLibre-ExtraBold',
+                    fontFamily: 'AbhayaLibre',
                     fontSize: 25,
                     color: Colors.black,
                   ),
@@ -132,10 +131,9 @@ class _Training2State extends State<Training2> {
                         child: Text(
                           'See all',
                           style: TextStyle(
-                              fontFamily: 'AbhayaLibre-ExtraBold',
+                              fontFamily: 'AbhayaLibre',
                               fontSize: 20,
-                              color: Colors.grey
-                          ),
+                              color: Colors.grey),
                         ),
                       ),
                       SizedBox(width: 6),
@@ -168,7 +166,8 @@ class _Training2State extends State<Training2> {
                           height: 80,
                           width: 120,
                           child: Image(
-                            image: NetworkImage('https://happay.com/blog/wp-content/uploads/sites/12/2022/08/types-of-financial-frauds.jpeg'),
+                            image: NetworkImage(
+                                'https://happay.com/blog/wp-content/uploads/sites/12/2022/08/types-of-financial-frauds.jpeg'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -179,7 +178,7 @@ class _Training2State extends State<Training2> {
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 20,
-                              fontFamily: 'AbhayaLibre-ExtraBold',
+                              fontFamily: 'AbhayaLibre',
                             ),
                           ),
                         ),
@@ -200,7 +199,8 @@ class _Training2State extends State<Training2> {
                           height: 80,
                           width: 120,
                           child: Image(
-                            image: NetworkImage('https://bernama.com/storage/photos/1621ca827268e3f873bf82d9e0b83e3d5fc6352723610'),
+                            image: NetworkImage(
+                                'https://bernama.com/storage/photos/1621ca827268e3f873bf82d9e0b83e3d5fc6352723610'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -211,7 +211,7 @@ class _Training2State extends State<Training2> {
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 20,
-                              fontFamily: 'AbhayaLibre-ExtraBold',
+                              fontFamily: 'AbhayaLibre',
                             ),
                           ),
                         ),
@@ -232,7 +232,8 @@ class _Training2State extends State<Training2> {
                           height: 80,
                           width: 120,
                           child: Image(
-                            image: NetworkImage('https://cioafrica.co/wp-content/uploads/2024/01/cyber-security.jpeg'),
+                            image: NetworkImage(
+                                'https://cioafrica.co/wp-content/uploads/2024/01/cyber-security.jpeg'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -243,7 +244,7 @@ class _Training2State extends State<Training2> {
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 20,
-                              fontFamily: 'AbhayaLibre-ExtraBold',
+                              fontFamily: 'AbhayaLibre',
                             ),
                           ),
                         ),
@@ -264,7 +265,8 @@ class _Training2State extends State<Training2> {
                           height: 80,
                           width: 120,
                           child: Image(
-                            image: NetworkImage('https://media.istockphoto.com/id/1422164584/photo/help-needed-sign-held-up-by-man-against-blue-sky-background.jpg?s=612x612&w=0&k=20&c=iLpNdPgEgEjAyallQgv0RFpjpEj5jaBKMOkfr8W00z8='),
+                            image: NetworkImage(
+                                'https://media.istockphoto.com/id/1422164584/photo/help-needed-sign-held-up-by-man-against-blue-sky-background.jpg?s=612x612&w=0&k=20&c=iLpNdPgEgEjAyallQgv0RFpjpEj5jaBKMOkfr8W00z8='),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -275,7 +277,7 @@ class _Training2State extends State<Training2> {
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 20,
-                              fontFamily: 'AbhayaLibre-ExtraBold',
+                              fontFamily: 'AbhayaLibre',
                             ),
                           ),
                         ),
@@ -296,7 +298,8 @@ class _Training2State extends State<Training2> {
                           height: 80,
                           width: 120,
                           child: Image(
-                            image: NetworkImage('https://eurisko.net/wp-content/uploads/2023/11/ai-financial-fraud-detection.jpg'),
+                            image: NetworkImage(
+                                'https://eurisko.net/wp-content/uploads/2023/11/ai-financial-fraud-detection.jpg'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -307,7 +310,7 @@ class _Training2State extends State<Training2> {
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 20,
-                              fontFamily: 'AbhayaLibre-ExtraBold',
+                              fontFamily: 'AbhayaLibre',
                             ),
                           ),
                         ),
@@ -331,7 +334,7 @@ class _Training2State extends State<Training2> {
                     child: Text(
                       '\$ 40.95',
                       style: TextStyle(
-                        fontFamily: 'AbhayaLibre-ExtraBold',
+                        fontFamily: 'AbhayaLibre',
                         fontSize: 30,
                         color: Colors.black,
                       ),
@@ -349,7 +352,7 @@ class _Training2State extends State<Training2> {
                           child: Text(
                             'Enroll Now',
                             style: TextStyle(
-                              fontFamily: 'AbhayaLibre-ExtraBold',
+                              fontFamily: 'AbhayaLibre',
                               fontSize: 20,
                               color: Colors.white,
                             ),

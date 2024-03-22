@@ -22,36 +22,24 @@ class _NewsState extends State<News> {
       body: Column(
         children: [
           Padding(
-        padding: EdgeInsets.only(top: 50, left: 25, right: 20),
-        child: Row(
-          children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: Transform.scale(
-                scale: 0.8, // Adjust the scale factor as needed
-                child: Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.white,
+            padding: EdgeInsets.only(top: 70, left: 25, right: 20),
+            child: Row(
+              children: [
+                SizedBox(width: 120),
+                Spacer(),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Icon(
+                    Icons.home,
+                    color: Colors.white,
+                    size: 30,
+                  ),
                 ),
-              ),
+              ],
             ),
-            SizedBox(width: 120),
-            Spacer(),
-            GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: Icon(
-                Icons.home,
-                color: Colors.white,
-                size: 30,
-              ),
-            ),
-          ],
-        ),
-      ),
+          ),
           const Row(
             children: [
               SizedBox(width: 50),
@@ -63,7 +51,7 @@ class _NewsState extends State<News> {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 36,
-                    fontFamily: 'AbhayaLibre-ExtraBold',
+                    fontFamily: 'AbhayaLibre',
                   ),
                 ),
               ),
@@ -86,12 +74,12 @@ class _NewsState extends State<News> {
                         width: 330,
                       ),
                       Positioned(
-                        top:120,
+                        top: 120,
                         left: 20,
                         child: Text(
                           'Meta Stock\nPrice Soared by 20%',
                           style: TextStyle(
-                            fontFamily: 'AbhayaLibre-ExtraBold',
+                            fontFamily: 'AbhayaLibre',
                             fontSize: 30,
                             color: Colors.white,
                           ),
@@ -104,9 +92,9 @@ class _NewsState extends State<News> {
                 GestureDetector(
                   onTap: () {
                     Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const NewsPage())
-                    );
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const NewsPage()));
                   },
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(30),
@@ -119,12 +107,12 @@ class _NewsState extends State<News> {
                           width: 330,
                         ),
                         Positioned(
-                          top:100,
+                          top: 100,
                           left: 20,
                           child: Text(
                             'Google recently\ntalked about their\nnew AI model',
                             style: TextStyle(
-                              fontFamily: 'AbhayaLibre-ExtraBold',
+                              fontFamily: 'AbhayaLibre',
                               fontSize: 30,
                               color: Colors.white,
                             ),
@@ -146,12 +134,12 @@ class _NewsState extends State<News> {
                         width: 330,
                       ),
                       Positioned(
-                        top:60,
+                        top: 60,
                         left: 20,
                         child: Text(
                           'Do you know\nfinancial fraud\nis around you?',
                           style: TextStyle(
-                            fontFamily: 'AbhayaLibre-ExtraBold',
+                            fontFamily: 'AbhayaLibre',
                             fontSize: 30,
                             color: Colors.white,
                           ),
@@ -172,12 +160,12 @@ class _NewsState extends State<News> {
                         width: 330,
                       ),
                       Positioned(
-                        top:30,
+                        top: 30,
                         left: 20,
                         child: Text(
                           'How to Survive\nin Investment Pool?',
                           style: TextStyle(
-                            fontFamily: 'AbhayaLibre-ExtraBold',
+                            fontFamily: 'AbhayaLibre',
                             fontSize: 30,
                             color: Colors.black,
                           ),
@@ -203,7 +191,7 @@ class _NewsState extends State<News> {
                         child: Text(
                           'Start your\ntrading journey today!',
                           style: TextStyle(
-                            fontFamily: 'AbhayaLibre-ExtraBold',
+                            fontFamily: 'AbhayaLibre',
                             fontSize: 30,
                             color: Colors.white,
                           ),
@@ -241,8 +229,8 @@ class _NewsState extends State<News> {
                   onTap: () {
                     Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const NewsPage2())
-                    );
+                        MaterialPageRoute(
+                            builder: (context) => const NewsPage2()));
                   },
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
@@ -250,9 +238,8 @@ class _NewsState extends State<News> {
                       height: 100,
                       width: 350,
                       decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20)
-                      ),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20)),
                       child: Row(
                         children: [
                           ClipRRect(
@@ -290,8 +277,7 @@ class _NewsState extends State<News> {
                     width: 350,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(20)
-                    ),
+                        borderRadius: BorderRadius.circular(20)),
                     child: Row(
                       children: [
                         ClipRRect(
@@ -328,8 +314,7 @@ class _NewsState extends State<News> {
                     width: 350,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(20)
-                    ),
+                        borderRadius: BorderRadius.circular(20)),
                     child: Row(
                       children: [
                         ClipRRect(
@@ -350,7 +335,7 @@ class _NewsState extends State<News> {
                         const Text(
                           'Warren Buffett Makes\nBold Investment Move\nAmid Market Volatility',
                           style: TextStyle(
-                            fontFamily: 'AbhayaLibre-ExtraBold',
+                            fontFamily: 'AbhayaLibre',
                             fontSize: 18,
                             color: Colors.black,
                           ),
@@ -366,8 +351,7 @@ class _NewsState extends State<News> {
                     width: 350,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(20)
-                    ),
+                        borderRadius: BorderRadius.circular(20)),
                     child: Row(
                       children: [
                         ClipRRect(
@@ -388,7 +372,7 @@ class _NewsState extends State<News> {
                         const Text(
                           'Authorities Uncover\nMajor Financial\nFraud Scheme Involving\nMillions of Dollars',
                           style: TextStyle(
-                            fontFamily: 'AbhayaLibre-ExtraBold',
+                            fontFamily: 'AbhayaLibre',
                             fontSize: 18,
                             color: Colors.black,
                           ),
@@ -404,8 +388,7 @@ class _NewsState extends State<News> {
                     width: 350,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(20)
-                    ),
+                        borderRadius: BorderRadius.circular(20)),
                     child: Row(
                       children: [
                         ClipRRect(
@@ -426,7 +409,7 @@ class _NewsState extends State<News> {
                         const Text(
                           'Large Corporation Files\nfor Bankruptcy Amid\nEconomic Uncertainty',
                           style: TextStyle(
-                            fontFamily: 'AbhayaLibre-ExtraBold',
+                            fontFamily: 'AbhayaLibre',
                             fontSize: 18,
                             color: Colors.black,
                           ),
@@ -442,8 +425,7 @@ class _NewsState extends State<News> {
                     width: 350,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(20)
-                    ),
+                        borderRadius: BorderRadius.circular(20)),
                     child: Row(
                       children: [
                         ClipRRect(
@@ -464,7 +446,7 @@ class _NewsState extends State<News> {
                         const Text(
                           'Tesla Stock Skyrockets\non Record Deliveries\nand Profit Surge',
                           style: TextStyle(
-                            fontFamily: 'AbhayaLibre-ExtraBold',
+                            fontFamily: 'AbhayaLibre',
                             fontSize: 18,
                             color: Colors.black,
                           ),
@@ -480,8 +462,7 @@ class _NewsState extends State<News> {
                     width: 350,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(20)
-                    ),
+                        borderRadius: BorderRadius.circular(20)),
                     child: Row(
                       children: [
                         ClipRRect(
@@ -502,7 +483,7 @@ class _NewsState extends State<News> {
                         const Text(
                           'Biotech Stock Soars\non Breakthrough Drug\nApproval',
                           style: TextStyle(
-                            fontFamily: 'AbhayaLibre-ExtraBold',
+                            fontFamily: 'AbhayaLibre',
                             fontSize: 18,
                             color: Colors.black,
                           ),

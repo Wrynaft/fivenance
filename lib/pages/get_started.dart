@@ -10,31 +10,41 @@ class _GetStartedState extends State<GetStarted> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Expanded(
-            child: Container(
-            margin: EdgeInsets.all(40),
-            alignment: Alignment.center,
-            child: Image(
-              image: AssetImage('assets/Logo.png'),
-            ),)
-        ),
-          Container(
-            decoration: BoxDecoration(gradient: LinearGradient(colors: [Color(0xFFD3FFF9), Color(0XFF61FF89)]),
-            borderRadius: BorderRadius.all(Radius.circular(30))),
-            margin: EdgeInsets.all(20),
-            child: ElevatedButton(
-            onPressed: (){
-              Navigator.pushNamed(context, '/begin');
-            },
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.transparent, shadowColor: Colors.transparent),
-            child: Text('Get Started', style: TextStyle(fontFamily: 'Judson', color: Colors.black, fontSize: 23)),)
-          )
-          ]
-      ),
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Expanded(
+              child: Container(
+                margin: EdgeInsets.all(40),
+                alignment: Alignment(0.05, 0.1),
+                child: Image(
+                  image: AssetImage('assets/Logo.png'),
+                  width: 332,
+                  height: 206,
+                ),
+              ),
+            ),
+            Container(
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        colors: [Color(0xFFD3FFF9), Color(0XFF61FF89)]),
+                    borderRadius: BorderRadius.all(Radius.circular(30))),
+                margin: EdgeInsets.all(20),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/begin');
+                  },
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      shadowColor: Colors.transparent),
+                  child: Text('Get Started',
+                      style: TextStyle(
+                          fontFamily: 'Judson',
+                          color: Colors.black,
+                          fontSize: 23)),
+                ))
+          ]),
       backgroundColor: Color(0xFF0C1C3C),
-      );
+    );
   }
 }

@@ -12,23 +12,57 @@ class Forum extends StatefulWidget {
 
 // State class for the Forum widget
 class _ForumState extends State<Forum> {
-
-
   // List of posts in the forum
   List<Post> posts = [
-    Post(username: 'Jian Ming',title: 'Introduction to Finance', content: 'Hello, folks. Finance is the management of money and investments, encompassing activities like saving, borrowing, lending, budgeting, and investing',
-    likes: 5, comments: [
-      Comment(username: 'Ryan', content: 'Investing is better than saving '),
-      Comment(username: 'Rui Zhe', content: 'My role model is Rovert Kuok'),
-    ],imagePath: 'assets/financePic.jpg'),
-    Post(username: 'Khoon Lyn', title: 'Learning is awesome!', content:'When it is finance',likes: 10, comments: []),
-    Post(username: 'Pikachu', title: '5nance',content: 'Check out this cool picture!', likes: 15, comments: [],
+    Post(
+        username: 'Jian Ming',
+        title: 'Introduction to Finance',
+        content:
+            'Hello, folks. Finance is the management of money and investments, encompassing activities like saving, borrowing, lending, budgeting, and investing',
+        likes: 5,
+        comments: [
+          Comment(
+              username: 'Ryan', content: 'Investing is better than saving '),
+          Comment(username: 'Rui Zhe', content: 'My role model is Rovert Kuok'),
+        ],
+        imagePath: 'assets/financePic.jpg'),
+    Post(
+        username: 'Khoon Lyn',
+        title: 'Learning is awesome!',
+        content: 'When it is finance',
+        likes: 10,
+        comments: []),
+    Post(
+        username: 'Pikachu',
+        title: '5nance',
+        content: 'Check out this cool picture!',
+        likes: 15,
+        comments: [],
         imagePath: 'assets/memes.jpg'),
-    Post(username: '5nance', title: 'Quote of the day',content: 'Life is like a box of chocolates. You never know what youre going to get', likes: 99, comments: [
-      Comment(username: 'Mamba', content: 'Keep up with financial news and trends to make informed decisions about your money.'),
-      Comment(username: 'Ui Zhe', content: 'Focus on paying off debts with high interest rates first to save money in the long run.'),
-    ]),
-    Post(username: 'Jay Chou', title:'Financial tips',content: 'Money can\'t buy happiness, but it can buy financial freedom.', likes: 1000, comments: [],imagePath: 'assets/financeMeme.jpg'),
+    Post(
+        username: '5nance',
+        title: 'Quote of the day',
+        content:
+            'Life is like a box of chocolates. You never know what youre going to get',
+        likes: 99,
+        comments: [
+          Comment(
+              username: 'Mamba',
+              content:
+                  'Keep up with financial news and trends to make informed decisions about your money.'),
+          Comment(
+              username: 'Ui Zhe',
+              content:
+                  'Focus on paying off debts with high interest rates first to save money in the long run.'),
+        ]),
+    Post(
+        username: 'Jay Chou',
+        title: 'Financial tips',
+        content:
+            'Money can\'t buy happiness, but it can buy financial freedom.',
+        likes: 1000,
+        comments: [],
+        imagePath: 'assets/financeMeme.jpg'),
   ];
 
   @override
@@ -39,23 +73,22 @@ class _ForumState extends State<Forum> {
       home: Scaffold(
         backgroundColor: Color(0xFF0C1C3C),
         appBar: AppBar(
-          title: Text(
-            'Forum',
-            style: TextStyle(
-              fontFamily: 'AbhayaLibre',
-              fontSize: 38.0,
-              fontWeight: FontWeight.bold,
-              color: Colors.white, // Set text color to white
+            title: Text(
+              'Forum',
+              style: TextStyle(
+                fontFamily: 'AbhayaLibre',
+                fontSize: 38.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.white, // Set text color to white
+              ),
             ),
-          ),
-          backgroundColor: Color(0xFF0C1C3C),
-          actions: [
-            Padding(
-              padding: const EdgeInsets.all(1.0),
-              child: Image.asset("assets/Logo.png"),
-            )
-          ]
-        ),
+            backgroundColor: Color(0xFF0C1C3C),
+            actions: [
+              Padding(
+                padding: const EdgeInsets.only(right: 10, left: 10),
+                child: Image.asset("assets/Logo.png"),
+              )
+            ]),
         body: ListView.builder(
           itemCount: posts.length,
           itemBuilder: (context, index) {
@@ -69,7 +102,8 @@ class _ForumState extends State<Forum> {
               context,
               MaterialPageRoute(builder: (context) => CreatePostPages()),
             );
-    },    child: Icon(Icons.add),
+          },
+          child: Icon(Icons.add),
         ),
       ),
     );
@@ -84,7 +118,13 @@ class Post {
   final String? imagePath;
   final List<Comment> comments;
 
-  Post({required this.username,required this.title, required this.content, required this.likes, required this.comments, this.imagePath});
+  Post(
+      {required this.username,
+      required this.title,
+      required this.content,
+      required this.likes,
+      required this.comments,
+      this.imagePath});
 }
 
 class Comment {
@@ -92,7 +132,7 @@ class Comment {
   final String content;
   int likes;
 
-  Comment({required this.username, required this.content,this.likes=0});
+  Comment({required this.username, required this.content, this.likes = 0});
 }
 
 class PostWidget extends StatefulWidget {
@@ -116,7 +156,7 @@ class _PostWidgetState extends State<PostWidget> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.symmetric(vertical:25.0),
+      margin: EdgeInsets.symmetric(vertical: 25.0),
       color: Colors.white.withOpacity(0.5),
       child: Padding(
         padding: EdgeInsets.all(15.0),
@@ -154,8 +194,7 @@ class _PostWidgetState extends State<PostWidget> {
                   SizedBox(height: 20.0), // Add space between image and content
                 ],
               ),
-            Text(widget.post.content,
-            style: TextStyle(fontSize: 16.0)),
+            Text(widget.post.content, style: TextStyle(fontSize: 16.0)),
             SizedBox(height: 18.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -194,8 +233,9 @@ class _PostWidgetState extends State<PostWidget> {
               ],
             ),
             SizedBox(height: 8.0),
-            ...widget.post.comments.map((comment) =>
-                CommentWidget(comment: comment)).toList(),
+            ...widget.post.comments
+                .map((comment) => CommentWidget(comment: comment))
+                .toList(),
             SizedBox(height: 20.0),
             Row(
               children: [
@@ -255,7 +295,6 @@ class _PostWidgetState extends State<PostWidget> {
     }
   }
 }
-
 
 class CommentWidget extends StatefulWidget {
   final Comment comment;

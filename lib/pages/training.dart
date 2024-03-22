@@ -20,62 +20,30 @@ class _TrainingState extends State<Training> {
       backgroundColor: const Color(0xFFE3E3E3),
       body: Column(
         children: [
-          Padding(
-        padding: EdgeInsets.only(top: 60, left: 25, right: 20),
-        child: Row(
-          children: [
-            GestureDetector(
-              onTap: (){
-                Navigator.pop(context);
-              },
-              child: Transform.scale(
-                scale: 0.8, // Adjust the scale factor as needed
-                child: Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            SizedBox(width: 120),
-            Spacer(),
-            GestureDetector(
-              onTap: (){
-                Navigator.pushNamed(context, '/home');
-              },
-              child: Icon(
-                Icons.home,
-                color: Colors.white,
-                size: 30,
-              ),
-            ),
-          ],
-        ),
-      ),
           GestureDetector(
             onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Training3())
-              );
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Training3()));
             },
             child: const Stack(
               children: [
                 SizedBox(
                   width: double.infinity,
                   child: Image(
-                    image: NetworkImage('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTEwL3Jhd3BpeGVsb2ZmaWNlMjFfc2ltcGxlX2JsdWVfbW9uZXlfYnVzaW5lc3NfZ3JhcGhfZmluYW5jZV9zaW1wbF8xYTVjMmM5Yi1kN2U3LTRkMTUtYTY1Mi04Y2QwODIyM2RiYmYtYy5qcGc.jpg'),
+                    image: NetworkImage(
+                        'https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTEwL3Jhd3BpeGVsb2ZmaWNlMjFfc2ltcGxlX2JsdWVfbW9uZXlfYnVzaW5lc3NfZ3JhcGhfZmluYW5jZV9zaW1wbF8xYTVjMmM5Yi1kN2U3LTRkMTUtYTY1Mi04Y2QwODIyM2RiYmYtYy5qcGc.jpg'),
                     fit: BoxFit.cover,
                     height: 250,
                     width: 330,
                   ),
                 ),
                 Positioned(
-                  top:155,
+                  top: 155,
                   left: 20,
                   child: Text(
                     'Prime Picks:\nExclusive Courses',
                     style: TextStyle(
-                      fontFamily: 'AbhayaLibre-ExtraBold',
+                      fontFamily: 'AbhayaLibre',
                       fontSize: 28,
                       color: Colors.white,
                     ),
@@ -103,7 +71,7 @@ class _TrainingState extends State<Training> {
                 child: Text(
                   'Courses',
                   style: TextStyle(
-                    fontFamily: 'AbhayaLibre-ExtraBold',
+                    fontFamily: 'AbhayaLibre',
                     fontSize: 30,
                     color: Colors.black,
                   ),
@@ -118,10 +86,9 @@ class _TrainingState extends State<Training> {
                         child: Text(
                           'See all',
                           style: TextStyle(
-                              fontFamily: 'AbhayaLibre-ExtraBold',
+                              fontFamily: 'AbhayaLibre',
                               fontSize: 20,
-                              color: Colors.grey
-                          ),
+                              color: Colors.grey),
                         ),
                       ),
                       SizedBox(width: 6),
@@ -159,7 +126,7 @@ class _TrainingState extends State<Training> {
                           height: 100,
                           width: 200,
                           child: Image(
-                            image: NetworkImage('https://www.ironfx.com/wp-content/uploads/2022/10/beginner-trader-forex-market.jpg'),
+                            image: AssetImage('assets/principledaytrading.jpg'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -170,7 +137,7 @@ class _TrainingState extends State<Training> {
                             Text(
                               'Trading',
                               style: TextStyle(
-                                fontFamily: "AbhayaLibre-ExtraBold",
+                                fontFamily: "AbhayaLibre",
                                 fontSize: 18,
                                 color: Colors.grey,
                               ),
@@ -183,7 +150,7 @@ class _TrainingState extends State<Training> {
                             Text(
                               'Principles of Day\nTrading',
                               style: TextStyle(
-                                fontFamily: 'AbhayaLibre-ExtraBold',
+                                fontFamily: 'AbhayaLibre',
                                 fontSize: 20,
                                 color: Colors.black,
                               ),
@@ -196,13 +163,14 @@ class _TrainingState extends State<Training> {
                             SizedBox(width: 10),
                             CircleAvatar(
                               radius: 15,
-                              backgroundImage: NetworkImage('https://cdn.luxe.digital/media/2019/09/12090502/business-professional-dress-code-men-style-luxe-digital.jpg'),
+                              backgroundImage: NetworkImage(
+                                  'https://cdn.luxe.digital/media/2019/09/12090502/business-professional-dress-code-men-style-luxe-digital.jpg'),
                             ),
                             SizedBox(width: 10),
                             Text(
                               'Michael Smith',
                               style: TextStyle(
-                                fontFamily: 'AbhayaLibre-ExtraBold',
+                                fontFamily: 'AbhayaLibre',
                                 fontSize: 15,
                                 color: Colors.black,
                               ),
@@ -218,7 +186,8 @@ class _TrainingState extends State<Training> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Training2()),
+                      MaterialPageRoute(
+                          builder: (context) => const Training2()),
                     );
                   },
                   child: ClipRRect(
@@ -235,7 +204,8 @@ class _TrainingState extends State<Training> {
                             height: 100,
                             width: 200,
                             child: Image(
-                              image: NetworkImage('https://appinventiv.com/wp-content/uploads/2021/12/How-Machine-Learning-Helps-in-Financial-Fraud-Detection-in-the-FinTech-Industry-01-scaled.webp'),
+                              image: NetworkImage(
+                                  'https://appinventiv.com/wp-content/uploads/2021/12/How-Machine-Learning-Helps-in-Financial-Fraud-Detection-in-the-FinTech-Industry-01-scaled.webp'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -272,7 +242,8 @@ class _TrainingState extends State<Training> {
                               SizedBox(width: 10),
                               CircleAvatar(
                                 radius: 15,
-                                backgroundImage: NetworkImage('https://static.vecteezy.com/system/resources/thumbnails/023/886/157/small/young-smiling-businesswoman-standing-in-blur-background-of-office-generative-ai-photo.jpg'),
+                                backgroundImage: NetworkImage(
+                                    'https://static.vecteezy.com/system/resources/thumbnails/023/886/157/small/young-smiling-businesswoman-standing-in-blur-background-of-office-generative-ai-photo.jpg'),
                               ),
                               SizedBox(width: 10),
                               Text(
@@ -305,7 +276,8 @@ class _TrainingState extends State<Training> {
                           height: 100,
                           width: 200,
                           child: Image(
-                            image: NetworkImage('https://static.vecteezy.com/system/resources/previews/006/921/796/non_2x/financial-literacy-concept-free-vector.jpg'),
+                            image: NetworkImage(
+                                'https://static.vecteezy.com/system/resources/previews/006/921/796/non_2x/financial-literacy-concept-free-vector.jpg'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -342,13 +314,14 @@ class _TrainingState extends State<Training> {
                             SizedBox(width: 10),
                             CircleAvatar(
                               radius: 15,
-                              backgroundImage: NetworkImage('https://images.forwardcdn.com/image/970x/center/images/cropped/istock-627909282-1514234385.jpg'),
+                              backgroundImage: NetworkImage(
+                                  'https://images.forwardcdn.com/image/970x/center/images/cropped/istock-627909282-1514234385.jpg'),
                             ),
                             SizedBox(width: 10),
                             Text(
                               'Eleanor Davies',
                               style: TextStyle(
-                                fontFamily: 'AbhayaLibre-ExtraBold',
+                                fontFamily: 'AbhayaLibre',
                                 fontSize: 15,
                                 color: Colors.black,
                               ),
@@ -374,7 +347,8 @@ class _TrainingState extends State<Training> {
                           height: 100,
                           width: 200,
                           child: Image(
-                            image: NetworkImage('https://media.geeksforgeeks.org/wp-content/uploads/20230622153258/ECONOMICS-LANDING-PAGE-copy.webp'),
+                            image: NetworkImage(
+                                'https://media.geeksforgeeks.org/wp-content/uploads/20230622153258/ECONOMICS-LANDING-PAGE-copy.webp'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -385,7 +359,7 @@ class _TrainingState extends State<Training> {
                             Text(
                               'Economics',
                               style: TextStyle(
-                                fontFamily: "AbhayaLibre-ExtraBold",
+                                fontFamily: "AbhayaLibre",
                                 fontSize: 18,
                                 color: Colors.grey,
                               ),
@@ -411,7 +385,8 @@ class _TrainingState extends State<Training> {
                             SizedBox(width: 10),
                             CircleAvatar(
                               radius: 15,
-                              backgroundImage: NetworkImage('https://www.bcjobs.ca/blog/wp-content/uploads/2019/04/12-ways-confident-professional-at-work-comp.jpg'),
+                              backgroundImage: NetworkImage(
+                                  'https://www.bcjobs.ca/blog/wp-content/uploads/2019/04/12-ways-confident-professional-at-work-comp.jpg'),
                             ),
                             SizedBox(width: 10),
                             Text(
@@ -443,7 +418,8 @@ class _TrainingState extends State<Training> {
                           height: 100,
                           width: 200,
                           child: Image(
-                            image: NetworkImage('https://img.freepik.com/free-photo/office-cityscape-builidings-contemporary-interior-room-modern-concept_53876-14120.jpg'),
+                            image: NetworkImage(
+                                'https://img.freepik.com/free-photo/office-cityscape-builidings-contemporary-interior-room-modern-concept_53876-14120.jpg'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -454,7 +430,7 @@ class _TrainingState extends State<Training> {
                             Text(
                               'Business',
                               style: TextStyle(
-                                fontFamily: "AbhayaLibre-ExtraBold",
+                                fontFamily: "AbhayaLibre",
                                 fontSize: 18,
                                 color: Colors.grey,
                               ),
@@ -480,13 +456,14 @@ class _TrainingState extends State<Training> {
                             SizedBox(width: 10),
                             CircleAvatar(
                               radius: 15,
-                              backgroundImage: NetworkImage('https://www.workitdaily.com/media-library/happy-successful-professional-man-holding-a-tablet.jpg?id=25967282&width=980'),
+                              backgroundImage: NetworkImage(
+                                  'https://www.workitdaily.com/media-library/happy-successful-professional-man-holding-a-tablet.jpg?id=25967282&width=980'),
                             ),
                             SizedBox(width: 10),
                             Text(
                               'Kwame Ofori',
                               style: TextStyle(
-                                fontFamily: 'AbhayaLibre-ExtraBold',
+                                fontFamily: 'AbhayaLibre',
                                 fontSize: 15,
                                 color: Colors.black,
                               ),
@@ -510,7 +487,7 @@ class _TrainingState extends State<Training> {
                 child: Text(
                   'Mentor of The Weeks',
                   style: TextStyle(
-                    fontFamily: 'AbhayaLibre-ExtraBold',
+                    fontFamily: 'AbhayaLibre',
                     fontSize: 25,
                     color: Colors.black,
                   ),
@@ -524,10 +501,9 @@ class _TrainingState extends State<Training> {
                         child: Text(
                           'See all',
                           style: TextStyle(
-                              fontFamily: 'AbhayaLibre-ExtraBold',
+                              fontFamily: 'AbhayaLibre',
                               fontSize: 20,
-                              color: Colors.grey
-                          ),
+                              color: Colors.grey),
                         ),
                       ),
                       SizedBox(width: 6),
@@ -563,7 +539,8 @@ class _TrainingState extends State<Training> {
                       SizedBox(width: 10),
                       CircleAvatar(
                         radius: 25,
-                        backgroundImage: NetworkImage('https://www.bcjobs.ca/blog/wp-content/uploads/2019/04/12-ways-confident-professional-at-work-comp.jpg'),
+                        backgroundImage: NetworkImage(
+                            'https://www.bcjobs.ca/blog/wp-content/uploads/2019/04/12-ways-confident-professional-at-work-comp.jpg'),
                       ),
                       SizedBox(width: 12),
                       Column(
@@ -571,7 +548,7 @@ class _TrainingState extends State<Training> {
                           Text(
                             'James Williams',
                             style: TextStyle(
-                              fontFamily: 'AbhayaLibre-Extrabold',
+                              fontFamily: 'AbhayaLibre',
                               fontSize: 20,
                               color: Colors.black,
                             ),
@@ -587,7 +564,7 @@ class _TrainingState extends State<Training> {
                               Text(
                                 '4.9(1388 reviews)',
                                 style: TextStyle(
-                                  fontFamily: 'AbhayaLibre-ExtraBold',
+                                  fontFamily: 'AbhayaLibre',
                                   fontSize: 18,
                                   color: Colors.grey,
                                 ),
@@ -612,7 +589,8 @@ class _TrainingState extends State<Training> {
                       SizedBox(width: 10),
                       CircleAvatar(
                         radius: 25,
-                        backgroundImage: NetworkImage('https://static.vecteezy.com/system/resources/thumbnails/023/886/157/small/young-smiling-businesswoman-standing-in-blur-background-of-office-generative-ai-photo.jpg'),
+                        backgroundImage: NetworkImage(
+                            'https://static.vecteezy.com/system/resources/thumbnails/023/886/157/small/young-smiling-businesswoman-standing-in-blur-background-of-office-generative-ai-photo.jpg'),
                       ),
                       SizedBox(width: 12),
                       Column(
@@ -620,7 +598,7 @@ class _TrainingState extends State<Training> {
                           Text(
                             'Emily Johnson',
                             style: TextStyle(
-                              fontFamily: 'AbhayaLibre-Extrabold',
+                              fontFamily: 'AbhayaLibre',
                               fontSize: 20,
                               color: Colors.black,
                             ),
@@ -636,7 +614,7 @@ class _TrainingState extends State<Training> {
                               Text(
                                 '4.8(1022 reviews)',
                                 style: TextStyle(
-                                  fontFamily: 'AbhayaLibre-ExtraBold',
+                                  fontFamily: 'AbhayaLibre',
                                   fontSize: 18,
                                   color: Colors.grey,
                                 ),
@@ -661,7 +639,8 @@ class _TrainingState extends State<Training> {
                       SizedBox(width: 10),
                       CircleAvatar(
                         radius: 25,
-                        backgroundImage: NetworkImage('https://cdn.luxe.digital/media/2019/09/12090502/business-professional-dress-code-men-style-luxe-digital.jpg'),
+                        backgroundImage: NetworkImage(
+                            'https://cdn.luxe.digital/media/2019/09/12090502/business-professional-dress-code-men-style-luxe-digital.jpg'),
                       ),
                       SizedBox(width: 12),
                       Column(
@@ -669,7 +648,7 @@ class _TrainingState extends State<Training> {
                           Text(
                             'Michael Smith',
                             style: TextStyle(
-                              fontFamily: 'AbhayaLibre-Extrabold',
+                              fontFamily: 'AbhayaLibre',
                               fontSize: 20,
                               color: Colors.black,
                             ),
@@ -685,7 +664,7 @@ class _TrainingState extends State<Training> {
                               Text(
                                 '4.6(666 reviews)',
                                 style: TextStyle(
-                                  fontFamily: 'AbhayaLibre-ExtraBold',
+                                  fontFamily: 'AbhayaLibre',
                                   fontSize: 18,
                                   color: Colors.grey,
                                 ),
