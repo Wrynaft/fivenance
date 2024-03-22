@@ -14,13 +14,15 @@ import 'package:fivenance/pages/newspage.dart';
 import 'package:fivenance/pages/profile.dart';
 import 'package:fivenance/pages/signup.dart';
 import 'package:fivenance/pages/training.dart';
+import 'package:fivenance/pages/trivia.dart';
+import 'package:fivenance/pages/trivia_answer.dart';
 import 'package:flutter/material.dart';
 
 
 void main() => runApp(MaterialApp(
-  initialRoute: '/',
+  initialRoute: '/triviaanswer',
   routes: {
-    '/': (context) => Loading(),
+    '/': (context) => GetStarted(),
     '/get_started': (context) => GetStarted(),
     '/begin': (context) => Begin(),
     '/editprofile': (context) => EditProfile(),
@@ -36,6 +38,8 @@ void main() => runApp(MaterialApp(
     '/profile': (context) => Profile(),
     '/signup': (context) => SignUp(),
     '/training': (context) => Training(),
+    '/trivia': (context) => Trivia(),
+    '/triviaanswer': (context) => TriviaAnswer(),
   },
 ));
 
