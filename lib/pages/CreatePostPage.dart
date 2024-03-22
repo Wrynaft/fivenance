@@ -1,24 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(CreatePostPages());
-}
-class CreatePostPage extends StatefulWidget {
-  const CreatePostPage({super.key});
-
-  @override
-  State<CreatePostPage> createState() => CreatePostPageState();
-}
-
-class CreatePostPageState extends State<CreatePostPage> {
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color(0xFF0C1C3C),
-    );
-  }
-}
-
 class CreatePostPages extends StatelessWidget {
   const CreatePostPages({super.key});
   @override

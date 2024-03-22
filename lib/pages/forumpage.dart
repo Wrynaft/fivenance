@@ -2,25 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'CreatePostPage.dart';
 
-// Main function to run the Flutter app
-void main() {
-  runApp(Forum());
-}
-class ForumPage extends StatefulWidget {
-  const ForumPage({super.key});
-
-  @override
-  State<ForumPage> createState() => _ForumPageState();
-}
-
-class _ForumPageState extends State<ForumPage> {
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color(0xFF0C1C3C),
-    );
-  }
-}
 // Forum widget, the main component of the app
 class Forum extends StatefulWidget {
   const Forum({Key? key}) : super(key: key);
@@ -84,7 +65,7 @@ class _ForumState extends State<Forum> {
             // Navigate to new post screen
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => CreatePostPage()),
+              MaterialPageRoute(builder: (context) => CreatePostPages()),
             );
     },    child: Icon(Icons.add),
         ),

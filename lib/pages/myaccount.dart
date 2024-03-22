@@ -1,4 +1,4 @@
-import 'package:fivenance/pages/forum.dart';
+import 'package:fivenance/pages/forumpage.dart';
 import 'package:fivenance/pages/home.dart';
 import 'package:fivenance/pages/news.dart';
 import 'package:fivenance/pages/profile.dart';

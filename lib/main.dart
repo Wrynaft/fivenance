@@ -1,7 +1,6 @@
 import 'package:fivenance/pages/begin.dart';
 import 'package:fivenance/pages/editprofile.dart';
 import 'package:fivenance/pages/forgotpw.dart';
-import 'package:fivenance/pages/forum.dart';
 import 'package:fivenance/pages/forumpage.dart';
 import 'package:fivenance/pages/get_started.dart';
 import 'package:fivenance/pages/home.dart';
@@ -30,6 +29,7 @@ import 'package:fivenance/pages/visitedtraining.dart';
 import 'package:fivenance/pages/triviarecord.dart';
 import 'package:fivenance/pages/trivia.dart';
 import 'package:fivenance/pages/trivia_answer.dart';
+import 'package:fivenance/pages/CreatePostPage.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -40,8 +40,8 @@ void main() => runApp(MaterialApp(
         '/begin': (context) => Begin(),
         '/editprofile': (context) => EditProfile(),
         '/forgotpw': (context) => ForgotPW(),
-        '/CreatePostPage': (context) => CreatePostPage(),
-        '/forumpage': (context) => ForumPage(),
+        '/CreatePostPage': (context) => CreatePostPages(),
+        '/forum': (context) => Forum(),
         '/login': (context) => Login(),
         '/mentor1': (context) => Mentor1(),
         '/mentor2': (context) => Mentor2(),
@@ -67,8 +67,5 @@ void main() => runApp(MaterialApp(
         '/trivia': (context) => Trivia(),
         '/triviaanswer': (context) => TriviaAnswer(),
   },
-  theme: ThemeData(
-    fontFamily: 'AbhayaLibre', // Use the actual font family name here
-    // Define other theme properties here
-  ),
+
     ));
