@@ -4,6 +4,7 @@ import 'package:fivenance/pages/begin.dart';
 import 'package:fivenance/pages/editprofile.dart';
 import 'package:fivenance/pages/goals.dart';
 import 'package:fivenance/pages/helpnsupport.dart';
+import 'package:fivenance/pages/home.dart';
 import 'package:fivenance/pages/myaccount.dart';
 import 'package:fivenance/pages/rewards.dart';
 import 'package:fivenance/pages/triviareport.dart';
@@ -63,6 +64,20 @@ class _ProfileState extends State<Profile> {
             ),
           ),
           Positioned(
+            // Back button
+            top: 110,
+            left: 15,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pop(context); // Navigate back to previous screen
+              },
+              child: Icon(
+                Icons.arrow_back_ios,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          Positioned(
             // MyAccountIcon
             top: kToolbarHeight + MediaQuery.of(context).padding.top + 168,
             right: 40,
@@ -83,7 +98,6 @@ class _ProfileState extends State<Profile> {
             ),
           ),
           Positioned(
-            // Activity log
             top: kToolbarHeight + MediaQuery.of(context).padding.top + 230,
             right: 40,
             child: GestureDetector(
@@ -228,7 +242,7 @@ class _ProfileState extends State<Profile> {
           ),
           Positioned(
             top: kToolbarHeight + MediaQuery.of(context).padding.top + 0,
-            left: MediaQuery.of(context).size.width / 2 - 170,
+            left: MediaQuery.of(context).size.width / 2 - 165,
             child: GestureDetector(
               child: Container(
                 width: 296,
