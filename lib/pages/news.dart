@@ -21,7 +21,37 @@ class _NewsState extends State<News> {
       backgroundColor: const Color(0xFF0C1C3C),
       body: Column(
         children: [
-          const SizedBox(height: 50),
+          Padding(
+        padding: EdgeInsets.only(top: 50, left: 25, right: 20),
+        child: Row(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Transform.scale(
+                scale: 0.8, // Adjust the scale factor as needed
+                child: Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            SizedBox(width: 120),
+            Spacer(),
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Icon(
+                Icons.home,
+                color: Colors.white,
+                size: 30,
+              ),
+            ),
+          ],
+        ),
+      ),
           const Row(
             children: [
               SizedBox(width: 50),
@@ -197,7 +227,7 @@ class _NewsState extends State<News> {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 36,
-                    fontFamily: 'AbhayaLibre-ExtraBold',
+                    fontFamily: 'AbhayaLibre',
                   ),
                 ),
               ),
@@ -243,7 +273,7 @@ class _NewsState extends State<News> {
                           const Text(
                             'Market Surges as\nTech Stocks Rally:\nBreaking News in Trading',
                             style: TextStyle(
-                              fontFamily: 'AbhayaLibre-ExtraBold',
+                              fontFamily: 'AbhayaLibre',
                               fontSize: 18,
                               color: Colors.black,
                             ),
@@ -282,7 +312,7 @@ class _NewsState extends State<News> {
                         const Text(
                           'Apple Unveils\nGroundbreaking\nInnovation in New Product\nAnnouncement Event',
                           style: TextStyle(
-                            fontFamily: 'AbhayaLibre-ExtraBold',
+                            fontFamily: 'AbhayaLibre',
                             fontSize: 18,
                             color: Colors.black,
                           ),

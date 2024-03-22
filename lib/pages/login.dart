@@ -14,6 +14,27 @@ class _LoginState extends State<Login> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
+          Padding(
+        padding: EdgeInsets.only(top: 20, left: 25, right: 20),
+        child: Row(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Transform.scale(
+                scale: 0.8, // Adjust the scale factor as needed
+                child: Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            SizedBox(width: 120),
+            Spacer(),
+          ],
+        ),
+      ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
@@ -74,7 +95,7 @@ class _LoginState extends State<Login> {
             margin: EdgeInsets.only(left:20, top:20, right: 20),
             child: ElevatedButton(
             onPressed: (){
-              Navigator.pushNamed(context, '/home');
+              Navigator.of(context).pushNamedAndRemoveUntil('/home', (Route<dynamic> route) => false);
             },
             style: ElevatedButton.styleFrom(backgroundColor: Colors.transparent, shadowColor: Colors.transparent),
             child: Text('Login', style: TextStyle(fontFamily: 'Judson', color: Colors.black, fontSize: 23)),)

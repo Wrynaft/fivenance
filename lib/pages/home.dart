@@ -3,7 +3,6 @@ import 'package:fivenance/pages/mentor1.dart';
 import 'package:fivenance/pages/news.dart';
 import 'package:fivenance/pages/profile.dart';
 import 'package:fivenance/pages/training.dart';
-import 'package:fivenance/pages/dailytrivia.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -16,7 +15,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   final PageController _controller = PageController();
-  int _currentPage = 0;
   bool _isLoading = false; // Track loading state
 
   @override
@@ -45,7 +43,7 @@ class _HomeState extends State<Home> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Profile()),
+                            MaterialPageRoute(builder: (context) => const Profile()),
                           );
                         },
                         child: Image.asset(
@@ -65,7 +63,6 @@ class _HomeState extends State<Home> {
                   controller: _controller,
                   onPageChanged: (int page) {
                     setState(() {
-                      _currentPage = page;
                     });
                   },
                   itemBuilder: (context, index) {
@@ -88,7 +85,7 @@ class _HomeState extends State<Home> {
                             _isLoading = true; // Start loading
                           });
                           await Future.delayed(
-                              Duration(seconds: 2)); // Simulating loading time
+                              const Duration(seconds: 2)); // Simulating loading time
                           setState(() {
                             _isLoading = false; // Stop loading
                           });
@@ -132,7 +129,7 @@ class _HomeState extends State<Home> {
                 child: SmoothPageIndicator(
                   controller: _controller,
                   count: 3,
-                  effect: JumpingDotEffect(
+                  effect: const JumpingDotEffect(
                     activeDotColor: Color.fromRGBO(97, 255, 137, 1.000),
                     dotColor: Color.fromRGBO(211, 255, 249, 1.000),
                     dotHeight: 15,
@@ -167,14 +164,14 @@ class _HomeState extends State<Home> {
                             context,
                             MaterialPageRoute(
                               builder: (context) =>
-                                  Forum(), // Navigate to news page
+                                  const Forum(), // Navigate to news page
                             ),
                           );
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: _isLoading
                               ? Colors.black.withOpacity(0.8)
-                              : Color.fromRGBO(79, 129, 147, 1.000),
+                              : const Color.fromRGBO(79, 129, 147, 1.000),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18),
                           ),
@@ -200,14 +197,14 @@ class _HomeState extends State<Home> {
                             context,
                             MaterialPageRoute(
                               builder: (context) =>
-                                  News(), // Navigate to news page
+                                  const News(), // Navigate to news page
                             ),
                           );
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: _isLoading
                               ? Colors.black.withOpacity(0.8)
-                              : Color.fromRGBO(61, 99, 112, 1.000),
+                              : const Color.fromRGBO(61, 99, 112, 1.000),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18),
                           ),
@@ -219,7 +216,7 @@ class _HomeState extends State<Home> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -237,14 +234,14 @@ class _HomeState extends State<Home> {
                             context,
                             MaterialPageRoute(
                               builder: (context) =>
-                                  Training(), // Navigate to news page
+                                  const Training(), // Navigate to news page
                             ),
                           );
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: _isLoading
                               ? Colors.black.withOpacity(0.8)
-                              : Color.fromRGBO(61, 99, 112, 1.000),
+                              : const Color.fromRGBO(61, 99, 112, 1.000),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18),
                           ),
@@ -270,7 +267,7 @@ class _HomeState extends State<Home> {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: _isLoading
                               ? Colors.black.withOpacity(0.8)
-                              : Color.fromRGBO(79, 129, 147, 1.000),
+                              : const Color.fromRGBO(79, 129, 147, 1.000),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18),
                           ),
@@ -291,7 +288,7 @@ class _HomeState extends State<Home> {
 
 Widget buildPage(String imageUrl, String title, String date) {
   return Container(
-    margin: EdgeInsets.only(left: 5),
+    margin: const EdgeInsets.only(left: 5),
     child: ClipRRect(
       borderRadius: BorderRadius.circular(30),
       child: Stack(
@@ -309,7 +306,7 @@ Widget buildPage(String imageUrl, String title, String date) {
                   begin: Alignment.bottomCenter,
                   end: Alignment.topCenter,
                   colors: [
-                    Color.fromRGBO(41, 117, 89, 1).withOpacity(0.7),
+                    const Color.fromRGBO(41, 117, 89, 1).withOpacity(0.7),
                     Colors.transparent,
                   ],
                 ),
@@ -353,7 +350,7 @@ Widget buildPage(String imageUrl, String title, String date) {
             left: 20,
             child: Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 fontFamily: 'AbhayaLibre',
                 fontSize: 33,
                 color: Colors.white,
@@ -365,7 +362,7 @@ Widget buildPage(String imageUrl, String title, String date) {
             left: 20,
             child: Text(
               date,
-              style: TextStyle(
+              style: const TextStyle(
                 fontFamily: 'AbhayaLibre-Regular',
                 fontSize: 16,
                 color: Color.fromARGB(215, 215, 215, 1000),

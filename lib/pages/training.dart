@@ -20,6 +20,37 @@ class _TrainingState extends State<Training> {
       backgroundColor: const Color(0xFFE3E3E3),
       body: Column(
         children: [
+          Padding(
+        padding: EdgeInsets.only(top: 60, left: 25, right: 20),
+        child: Row(
+          children: [
+            GestureDetector(
+              onTap: (){
+                Navigator.pop(context);
+              },
+              child: Transform.scale(
+                scale: 0.8, // Adjust the scale factor as needed
+                child: Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            SizedBox(width: 120),
+            Spacer(),
+            GestureDetector(
+              onTap: (){
+                Navigator.pushNamed(context, '/home');
+              },
+              child: Icon(
+                Icons.home,
+                color: Colors.white,
+                size: 30,
+              ),
+            ),
+          ],
+        ),
+      ),
           GestureDetector(
             onTap: () {
               Navigator.push(

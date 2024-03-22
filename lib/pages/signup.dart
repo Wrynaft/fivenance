@@ -1,3 +1,4 @@
+import 'package:fivenance/pages/profile.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatefulWidget {
@@ -7,7 +8,74 @@ class SignUp extends StatefulWidget {
 
 String? dropdownValue;
 class _SignUpState extends State<SignUp> {
+  bool _isLoading = false; // Flag to track loading state
 
+  void _showSignUpConfirmation(BuildContext context) {
+    setState(() {
+      _isLoading = true; // Set loading state to true
+    });
+
+    // Simulate delay before showing Save.png
+      // Close loading dialog
+      setState(() {
+        _isLoading = false;
+      });
+
+      // Show the Save.png image and back button
+      showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          return Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(height: 20),
+                Material(
+                  color: Colors.transparent,
+                  child: Image.asset(
+                    'assets/Save.png',
+                    width: 384,
+                    height: 195,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                SizedBox(height: 20),
+                SizedBox(
+                  height: 50,
+                  width: 170,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pushNamedAndRemoveUntil('/begin', (Route<dynamic> route) => false);
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          Color.fromARGB(255, 54, 199, 117)),
+                      shape: MaterialStateProperty.all<OutlinedBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                          side: BorderSide(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                    child: Text(
+                      'Back',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
+      );
+  }
+  
   bool isChecked = false;
   TextEditingController _dateController = TextEditingController();
 
@@ -21,6 +89,27 @@ class _SignUpState extends State<SignUp> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
+              Padding(
+        padding: EdgeInsets.only(top: 20, left: 25, right: 20),
+        child: Row(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Transform.scale(
+                scale: 0.8, // Adjust the scale factor as needed
+                child: Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            SizedBox(width: 120),
+            Spacer(),
+          ],
+        ),
+      ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
@@ -115,7 +204,9 @@ class _SignUpState extends State<SignUp> {
                 borderRadius: BorderRadius.all(Radius.circular(30))),
                 margin: EdgeInsets.only(left:20, top:20, right: 20),
                 child: ElevatedButton(
-                onPressed: null,
+                onPressed: (){
+                  _showSignUpConfirmation(context);
+                },
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.transparent, shadowColor: Colors.transparent),
                 child: Text('Sign Up', style: TextStyle(fontFamily: 'Judson', color: Colors.black, fontSize: 23)),)
               ),
@@ -124,7 +215,8 @@ class _SignUpState extends State<SignUp> {
                 children: <Widget>[
                 Text('HAVE AN ACCOUNT? ', style: TextStyle(color: Color(0xFFB6B6B6), fontSize: 13)),
                 TextButton(onPressed: null, child: Text('SIGN IN', style: TextStyle(color: Colors.white, fontSize: 13)))
-              ],)
+              ],),
+              
           ],),
         ),
       )

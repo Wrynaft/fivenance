@@ -17,6 +17,7 @@ class _Training3State extends State<Training3> {
       backgroundColor: const Color(0xFF0C1C3C),
       body: Column(
         children: [
+          
           const Stack(
             children: [
               SizedBox(

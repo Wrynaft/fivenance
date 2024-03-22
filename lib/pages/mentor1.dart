@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Mentor1 extends StatefulWidget {
   @override
@@ -10,7 +9,6 @@ String? dropdownValue;
 class _Mentor1State extends State<Mentor1> {
 
   bool isChecked = false;
-  TextEditingController _dateController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -60,13 +58,17 @@ class _Mentor1State extends State<Mentor1> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                 OutlinedButton(
-                  onPressed: null,
+                  onPressed: (){
+                    Navigator.pop(context);
+                  },
                   style: OutlinedButton.styleFrom(side: const BorderSide(color: Color(0xFF6DFF95))),
                   child: const Text('Cancel', style: TextStyle(fontFamily: 'Judson', color: Color(0xFF6DFF95), fontSize: 16)),),
               
-                const ElevatedButton(
+                ElevatedButton(
                   style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(Color(0xFF55E985))),
-                  onPressed: null, child: Text('Next', style: TextStyle(color: Colors.black, fontSize: 16)))
+                  onPressed: (){
+                    Navigator.pushNamed(context, '/mentor2');
+                  }, child: Text('Next', style: TextStyle(color: Colors.black, fontSize: 16)))
               ],),
             )
           ],),

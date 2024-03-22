@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Mentor2 extends StatefulWidget {
   @override
@@ -10,12 +9,11 @@ String? dropdownValue;
 class _Mentor2State extends State<Mentor2> {
 
   bool isChecked = false;
-  TextEditingController _dateController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF0C1C3C),
+      backgroundColor: const Color(0xFF0C1C3C),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -25,30 +23,30 @@ class _Mentor2State extends State<Mentor2> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                Column(children: <Widget>[
+                const Column(children: <Widget>[
                   Text('Mentorship', style: TextStyle(color: Colors.white, fontSize: 40)),
                   Text('Sign Up', style: TextStyle(color: Color(0xFFCACACA), fontSize: 40)),
                 ],),
                 Container(
-                margin: EdgeInsets.all(40),
+                margin: const EdgeInsets.all(40),
                 alignment: Alignment.center,
-                child: Image(
+                child: const Image(
                   width: 100,
                   image: AssetImage('assets/Logo.png'),
                 ),),
               ],),
 
             Container(
-              margin:EdgeInsets.only(left:20, right:20, bottom: 20),
-              child: LinearProgressIndicator(value: 0.66, color: Color(0xFF64FF8C), backgroundColor: Color(0xFF523F62),)),
+              margin:const EdgeInsets.only(left:20, right:20, bottom: 20),
+              child: const LinearProgressIndicator(value: 0.66, color: Color(0xFF64FF8C), backgroundColor: Color(0xFF523F62),)),
 
-            Center(child: Text('Page 2: Relevant Qualifications', style: TextStyle(color: Colors.white, fontSize: 26))),
-            Container(margin: EdgeInsets.only(left: 20, top: 10), child: Text('Certification*', style: TextStyle(color: Colors.white, fontSize: 15))),
-            Container(margin: EdgeInsets.all(20),child: Image(image: AssetImage('assets/Upload2nd.png'),)),
-            Container(margin: EdgeInsets.only(left:20), child: Text('Please upload any relevant certificates  that demonstrate your expertise, experience, or completion of training programs to  support your qualifications for mentoring.', style: TextStyle(color: Colors.white, fontSize: 13))),
+            const Center(child: Text('Page 2: Relevant Qualifications', style: TextStyle(color: Colors.white, fontSize: 26))),
+            Container(margin: const EdgeInsets.only(left: 20, top: 10), child: const Text('Certification*', style: TextStyle(color: Colors.white, fontSize: 15))),
+            Container(margin: const EdgeInsets.all(20),child: const Image(image: AssetImage('assets/Upload2nd.png'),)),
+            Container(margin: const EdgeInsets.only(left:20), child: const Text('Please upload any relevant certificates  that demonstrate your expertise, experience, or completion of training programs to  support your qualifications for mentoring.', style: TextStyle(color: Colors.white, fontSize: 13))),
             Container(
-              margin: EdgeInsets.all(20),
-              child: TextField(
+              margin: const EdgeInsets.all(20),
+              child: const TextField(
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                   labelText: 'Other:',
@@ -59,16 +57,18 @@ class _Mentor2State extends State<Mentor2> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 20),
+              margin: const EdgeInsets.only(top: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                 OutlinedButton(
-                  onPressed: null,
+                  onPressed: (){
+                    Navigator.pop(context);
+                  },
                   style: OutlinedButton.styleFrom(side: const BorderSide(color: Color(0xFF6DFF95))),
                   child: const Text('Back', style: TextStyle(fontFamily: 'Judson', color: Color(0xFF6DFF95), fontSize: 16)),),
               
-                ElevatedButton(
+                const ElevatedButton(
                   style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(Color(0xFF55E985))),
                   onPressed: null, child: Text('Next', style: TextStyle(color: Colors.black, fontSize: 16)))
               ],),

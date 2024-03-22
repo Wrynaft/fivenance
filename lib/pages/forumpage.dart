@@ -12,6 +12,8 @@ class Forum extends StatefulWidget {
 
 // State class for the Forum widget
 class _ForumState extends State<Forum> {
+
+
   // List of posts in the forum
   List<Post> posts = [
     Post(username: 'Jian Ming',title: 'Introduction to Finance', content: 'Hello, folks. Finance is the management of money and investments, encompassing activities like saving, borrowing, lending, budgeting, and investing',
