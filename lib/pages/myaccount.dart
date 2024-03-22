@@ -3,6 +3,7 @@ import 'package:fivenance/pages/home.dart';
 import 'package:fivenance/pages/news.dart';
 import 'package:fivenance/pages/profile.dart';
 import 'package:fivenance/pages/training.dart';
+import 'package:fivenance/pages/trivia.dart';
 import 'package:flutter/material.dart';
 
 class MyAccount extends StatefulWidget {
@@ -81,7 +82,7 @@ class _MyAccountState extends State<MyAccount> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Profile()),
+                        MaterialPageRoute(builder: (context) => Trivia()),
                       );
                     },
                     child: Image.asset(
