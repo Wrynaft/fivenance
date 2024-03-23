@@ -59,7 +59,7 @@ class _LoginState extends State<Login> {
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
                           side: BorderSide(
-                            color: Colors.white,
+                            color: Colors.transparent,
                           ),
                         ),
                       ),
@@ -89,7 +89,7 @@ class _LoginState extends State<Login> {
           backgroundColor: Color(0xFF0C1C3C),
           body: SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.only(top: 100),
+              padding: EdgeInsets.only(top: 70),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -116,30 +116,44 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
-                      Column(
-                        children: <Widget>[
-                          Text('Login',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 46)),
-                          Text('Glad you\'re here!',
-                              style: TextStyle(
-                                  color: Color(0xFFCACACA), fontSize: 16)),
-                        ],
+                      Padding(
+                        padding: EdgeInsets.only(left: 30, top: 40, right: 5),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text('Login',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 46,
+                                  fontFamily: 'AbhayaLibre',
+                                )),
+                            SizedBox(height: 10),
+                            Text('Glad you\'re here!',
+                                style: TextStyle(
+                                  color: Color(0xFFCACACA),
+                                  fontSize: 16,
+                                  fontFamily: 'NotoSans-Medium',
+                                )),
+                          ],
+                        ),
                       ),
-                      Container(
-                        margin: EdgeInsets.all(40),
-                        alignment: Alignment.center,
-                        child: Image(
-                          width: 140,
-                          image: AssetImage('assets/Logo.png'),
+                      Padding(
+                        padding: EdgeInsets.only(top: 40),
+                        child: Container(
+                          margin: EdgeInsets.all(40),
+                          alignment: Alignment.center,
+                          child: Image(
+                            width: 140,
+                            image: AssetImage('assets/Logo.png'),
+                          ),
                         ),
                       ),
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.all(20),
+                    margin: EdgeInsets.only(left: 25, top: 0, right: 25),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       gradient: LinearGradient(colors: [
@@ -148,19 +162,22 @@ class _LoginState extends State<Login> {
                       ]),
                     ),
                     child: SizedBox(
-                      width: 250,
+                      width: 230,
+                      height: 60,
                       child: TextField(
                           style: TextStyle(color: Colors.white, fontSize: 18),
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(20)),
-                              labelText: 'Username',
+                              labelText: '   Username',
                               labelStyle: TextStyle(
-                                  color: Colors.white, fontSize: 18))),
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontFamily: 'AbhayaLibre'))),
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.all(20),
+                    margin: EdgeInsets.only(left: 25, top: 30, right: 25),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       gradient: LinearGradient(colors: [
@@ -169,16 +186,19 @@ class _LoginState extends State<Login> {
                       ]),
                     ),
                     child: SizedBox(
-                      width: 250,
+                      width: 230,
+                      height: 60,
                       child: TextField(
                           style: TextStyle(color: Colors.white, fontSize: 18),
                           obscureText: true,
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(20)),
-                              labelText: 'Password',
+                              labelText: '   Password',
                               labelStyle: TextStyle(
-                                  color: Colors.white, fontSize: 18))),
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontFamily: 'AbhayaLibre'))),
                     ),
                   ),
                   Container(
@@ -186,7 +206,7 @@ class _LoginState extends State<Login> {
                           gradient: LinearGradient(
                               colors: [Color(0xFFD3FFF9), Color(0XFF61FF89)]),
                           borderRadius: BorderRadius.all(Radius.circular(30))),
-                      margin: EdgeInsets.only(left: 20, top: 20, right: 20),
+                      margin: EdgeInsets.only(left: 25, top: 35, right: 25),
                       child: ElevatedButton(
                         onPressed: () {
                           _showSaveConfirmation(context);
@@ -203,13 +223,16 @@ class _LoginState extends State<Login> {
                   TextButton(
                       onPressed: null,
                       child: Text('Forgot Password?',
-                          style: TextStyle(color: Colors.white, fontSize: 16))),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontFamily: 'AbhayaLibre-Regular'))),
                   Image(
                     image: AssetImage('assets/Or.png'),
                   ),
                   Container(
                       margin:
-                          const EdgeInsets.only(left: 20, right: 20, top: 20),
+                          const EdgeInsets.only(left: 25, right: 25, top: 15),
                       child: const ElevatedButton(
                         onPressed: null,
                         style: ButtonStyle(
@@ -234,12 +257,16 @@ class _LoginState extends State<Login> {
                     children: <Widget>[
                       Text('DON\'T HAVE AN ACCOUNT? ',
                           style: TextStyle(
-                              color: Color(0xFFB6B6B6), fontSize: 13)),
+                              color: Color(0xFFB6B6B6),
+                              fontSize: 13,
+                              fontFamily: 'Poppins-Bold')),
                       TextButton(
                           onPressed: null,
                           child: Text('SIGN UP',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 13)))
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 13,
+                                  fontFamily: 'Poppins-Bold')))
                     ],
                   )
                 ],

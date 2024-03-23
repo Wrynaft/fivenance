@@ -79,5 +79,24 @@ flutter:
     - family: AbhayaLibre
       fonts:
         - asset: assets/fonts/AbhayaLibre-ExtraBold.ttf
+    - family: AbhayaLibre-Regular
+      fonts:
+        - asset: assets/fonts/AbhayaLibre-Regular.ttf
+    - family: Judson
+      fonts:
+        - asset: assets/fonts/Judson-Bold.ttf
+    - family: Judson-Regular
+      fonts:
+        - asset: assets/fonts/Judson-Regular.ttf
+    - family: Poppins-Bold
+      fonts:
+        - asset: assets/fonts/Poppins-Bold.ttf
+    - family: NotoSans-Medium
+      fonts:
+        - asset: assets/fonts/NotoSans-Medium.ttf
+    - family: Poppins-Light
+      fonts:
+        - asset: assets/fonts/Poppins-Light.ttf
+
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
