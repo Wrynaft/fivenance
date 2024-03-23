@@ -30,8 +30,7 @@ class _TrainingState extends State<Training> {
                 SizedBox(
                   width: double.infinity,
                   child: Image(
-                    image: NetworkImage(
-                        'https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTEwL3Jhd3BpeGVsb2ZmaWNlMjFfc2ltcGxlX2JsdWVfbW9uZXlfYnVzaW5lc3NfZ3JhcGhfZmluYW5jZV9zaW1wbF8xYTVjMmM5Yi1kN2U3LTRkMTUtYTY1Mi04Y2QwODIyM2RiYmYtYy5qcGc.jpg'),
+                    image: AssetImage('assets/trainingbg.jpg'),
                     fit: BoxFit.cover,
                     height: 250,
                     width: 330,
@@ -163,8 +162,7 @@ class _TrainingState extends State<Training> {
                             SizedBox(width: 10),
                             CircleAvatar(
                               radius: 15,
-                              backgroundImage: NetworkImage(
-                                  'https://cdn.luxe.digital/media/2019/09/12090502/business-professional-dress-code-men-style-luxe-digital.jpg'),
+                              backgroundImage: AssetImage('assets/people1.jpg'),
                             ),
                             SizedBox(width: 10),
                             Text(
@@ -204,8 +202,7 @@ class _TrainingState extends State<Training> {
                             height: 100,
                             width: 200,
                             child: Image(
-                              image: NetworkImage(
-                                  'https://appinventiv.com/wp-content/uploads/2021/12/How-Machine-Learning-Helps-in-Financial-Fraud-Detection-in-the-FinTech-Industry-01-scaled.webp'),
+                              image: AssetImage('assets/course2.jpg'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -242,8 +239,7 @@ class _TrainingState extends State<Training> {
                               SizedBox(width: 10),
                               CircleAvatar(
                                 radius: 15,
-                                backgroundImage: NetworkImage(
-                                    'https://static.vecteezy.com/system/resources/thumbnails/023/886/157/small/young-smiling-businesswoman-standing-in-blur-background-of-office-generative-ai-photo.jpg'),
+                                backgroundImage: AssetImage('assets/women.jpg'),
                               ),
                               SizedBox(width: 10),
                               Text(
@@ -276,8 +272,7 @@ class _TrainingState extends State<Training> {
                           height: 100,
                           width: 200,
                           child: Image(
-                            image: NetworkImage(
-                                'https://static.vecteezy.com/system/resources/previews/006/921/796/non_2x/financial-literacy-concept-free-vector.jpg'),
+                            image: AssetImage('assets/program3.jpg'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -314,8 +309,7 @@ class _TrainingState extends State<Training> {
                             SizedBox(width: 10),
                             CircleAvatar(
                               radius: 15,
-                              backgroundImage: NetworkImage(
-                                  'https://images.forwardcdn.com/image/970x/center/images/cropped/istock-627909282-1514234385.jpg'),
+                              backgroundImage: AssetImage('assets/women2.jpg'),
                             ),
                             SizedBox(width: 10),
                             Text(
@@ -347,8 +341,7 @@ class _TrainingState extends State<Training> {
                           height: 100,
                           width: 200,
                           child: Image(
-                            image: NetworkImage(
-                                'https://media.geeksforgeeks.org/wp-content/uploads/20230622153258/ECONOMICS-LANDING-PAGE-copy.webp'),
+                            image: AssetImage('assets/program4.jpg'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -385,8 +378,7 @@ class _TrainingState extends State<Training> {
                             SizedBox(width: 10),
                             CircleAvatar(
                               radius: 15,
-                              backgroundImage: NetworkImage(
-                                  'https://www.bcjobs.ca/blog/wp-content/uploads/2019/04/12-ways-confident-professional-at-work-comp.jpg'),
+                              backgroundImage: AssetImage('assets/man1.jpg'),
                             ),
                             SizedBox(width: 10),
                             Text(
@@ -418,8 +410,7 @@ class _TrainingState extends State<Training> {
                           height: 100,
                           width: 200,
                           child: Image(
-                            image: NetworkImage(
-                                'https://img.freepik.com/free-photo/office-cityscape-builidings-contemporary-interior-room-modern-concept_53876-14120.jpg'),
+                            image: AssetImage('assets/program5.jpg'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -456,8 +447,7 @@ class _TrainingState extends State<Training> {
                             SizedBox(width: 10),
                             CircleAvatar(
                               radius: 15,
-                              backgroundImage: NetworkImage(
-                                  'https://www.workitdaily.com/media-library/happy-successful-professional-man-holding-a-tablet.jpg?id=25967282&width=980'),
+                              backgroundImage: AssetImage('assets/man2.jpg'),
                             ),
                             SizedBox(width: 10),
                             Text(
@@ -539,8 +529,7 @@ class _TrainingState extends State<Training> {
                       SizedBox(width: 10),
                       CircleAvatar(
                         radius: 25,
-                        backgroundImage: NetworkImage(
-                            'https://www.bcjobs.ca/blog/wp-content/uploads/2019/04/12-ways-confident-professional-at-work-comp.jpg'),
+                        backgroundImage: AssetImage('assets/man1.jpg'),
                       ),
                       SizedBox(width: 12),
                       Column(
@@ -589,8 +578,7 @@ class _TrainingState extends State<Training> {
                       SizedBox(width: 10),
                       CircleAvatar(
                         radius: 25,
-                        backgroundImage: NetworkImage(
-                            'https://static.vecteezy.com/system/resources/thumbnails/023/886/157/small/young-smiling-businesswoman-standing-in-blur-background-of-office-generative-ai-photo.jpg'),
+                        backgroundImage: AssetImage('assets/women.jpg'),
                       ),
                       SizedBox(width: 12),
                       Column(
@@ -639,8 +627,7 @@ class _TrainingState extends State<Training> {
                       SizedBox(width: 10),
                       CircleAvatar(
                         radius: 25,
-                        backgroundImage: NetworkImage(
-                            'https://cdn.luxe.digital/media/2019/09/12090502/business-professional-dress-code-men-style-luxe-digital.jpg'),
+                        backgroundImage: AssetImage('assets/people1.jpg'),
                       ),
                       SizedBox(width: 12),
                       Column(

@@ -38,8 +38,7 @@ class _NewsPageState extends State<NewsPage> {
             children: [
               SizedBox(width: 35),
               CircleAvatar(
-                backgroundImage: NetworkImage(
-                    'https://modernetiquetteinc.com/wp-content/uploads/sites/22/2018/05/professional-image.jpg'),
+                backgroundImage: AssetImage('assets/profimage1.jpg'),
               ),
               SizedBox(width: 15),
               Text(
@@ -65,8 +64,7 @@ class _NewsPageState extends State<NewsPage> {
           const SizedBox(
             height: 200,
             child: Image(
-              image: NetworkImage(
-                  'https://www.xevensolutions.com/wp-content/uploads/2024/02/Googles-Gemini-AI-Uses-Features-and-Industry-Impact-1.jpg'),
+              image: AssetImage('assets/newspage1google.jpg'),
             ),
           ),
           Container(

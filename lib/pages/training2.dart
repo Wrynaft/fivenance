@@ -22,8 +22,7 @@ class _Training2State extends State<Training2> {
             height: 200,
             width: double.infinity,
             child: Image(
-              image: NetworkImage(
-                  'https://appinventiv.com/wp-content/uploads/2021/12/How-Machine-Learning-Helps-in-Financial-Fraud-Detection-in-the-FinTech-Industry-01-scaled.webp'),
+              image: AssetImage('assets/course2.jpg'),
               fit: BoxFit.cover,
             ),
           ),
@@ -166,8 +165,7 @@ class _Training2State extends State<Training2> {
                           height: 80,
                           width: 120,
                           child: Image(
-                            image: NetworkImage(
-                                'https://happay.com/blog/wp-content/uploads/sites/12/2022/08/types-of-financial-frauds.jpeg'),
+                            image: AssetImage('assets/lesson1.jpeg'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -199,8 +197,7 @@ class _Training2State extends State<Training2> {
                           height: 80,
                           width: 120,
                           child: Image(
-                            image: NetworkImage(
-                                'https://bernama.com/storage/photos/1621ca827268e3f873bf82d9e0b83e3d5fc6352723610'),
+                            image: AssetImage('assets/lesson2.jpg'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -232,8 +229,7 @@ class _Training2State extends State<Training2> {
                           height: 80,
                           width: 120,
                           child: Image(
-                            image: NetworkImage(
-                                'https://cioafrica.co/wp-content/uploads/2024/01/cyber-security.jpeg'),
+                            image: AssetImage('assets/lesson3.jpeg'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -265,8 +261,7 @@ class _Training2State extends State<Training2> {
                           height: 80,
                           width: 120,
                           child: Image(
-                            image: NetworkImage(
-                                'https://media.istockphoto.com/id/1422164584/photo/help-needed-sign-held-up-by-man-against-blue-sky-background.jpg?s=612x612&w=0&k=20&c=iLpNdPgEgEjAyallQgv0RFpjpEj5jaBKMOkfr8W00z8='),
+                            image: AssetImage('assets/lesson4.jpg'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -298,8 +293,7 @@ class _Training2State extends State<Training2> {
                           height: 80,
                           width: 120,
                           child: Image(
-                            image: NetworkImage(
-                                'https://eurisko.net/wp-content/uploads/2023/11/ai-financial-fraud-detection.jpg'),
+                            image: AssetImage('assets/lesson5.jpg'),
                             fit: BoxFit.cover,
                           ),
                         ),

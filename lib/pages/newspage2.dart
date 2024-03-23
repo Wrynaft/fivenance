@@ -19,8 +19,7 @@ class _NewsPage2State extends State<NewsPage2> {
           const SizedBox(
             height: 300,
             child: Image(
-              image: NetworkImage(
-                  'https://www.fisdom.com/wp-content/uploads/2023/06/high-frequency-trading-_1_.webp'),
+              image: AssetImage('assets/trading.jpg'),
               fit: BoxFit.cover,
             ),
           ),

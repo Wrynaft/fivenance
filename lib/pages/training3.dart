@@ -23,8 +23,7 @@ class _Training3State extends State<Training3> {
                 height: 200,
                 width: double.infinity,
                 child: Image(
-                  image: NetworkImage(
-                      'https://t3.ftcdn.net/jpg/05/67/04/42/360_F_567044238_BiO9PpFi4XKUzoempXmuu6jqPJvbWiRu.jpg'),
+                  image: AssetImage('assets/ht1.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -61,8 +60,7 @@ class _Training3State extends State<Training3> {
                             height: 125,
                             width: 280,
                             child: Image(
-                              image: NetworkImage(
-                                  'https://wallpapercave.com/wp/wp2128301.jpg'),
+                              image: AssetImage('assets/ht2.jpg'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -87,8 +85,7 @@ class _Training3State extends State<Training3> {
                           children: [
                             SizedBox(width: 16),
                             CircleAvatar(
-                              backgroundImage: NetworkImage(
-                                  'https://media.istockphoto.com/id/1386217759/photo/portrait-of-a-confident-young-businesswoman-standing-against-an-urban-background.jpg?s=612x612&w=0&k=20&c=fAzBj4UAksz3wwAjXxKxByZMqDSuqQZSTij7jBiPtJc='),
+                              backgroundImage: AssetImage('assets/ht3.jpg'),
                               radius: 15,
                             ),
                             SizedBox(width: 10),
@@ -133,8 +130,7 @@ class _Training3State extends State<Training3> {
                             height: 125,
                             width: 280,
                             child: Image(
-                              image: NetworkImage(
-                                  'https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29tcGFueXxlbnwwfHwwfHx8MA%3D%3D'),
+                              image: AssetImage('assets/ht4.jpg'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -159,9 +155,7 @@ class _Training3State extends State<Training3> {
                           children: [
                             SizedBox(width: 16),
                             CircleAvatar(
-                              backgroundImage: NetworkImage(
-                                  'https://media.istockphoto.com/id/1096419446/photo/modern-cheerful-business-man-in-deep-blue-shirt-standing-with-crossed-arms-isolated-on-gray.jpg?s=612x612&w=0&k=20&c=r4f-QedoEjL9KU-H96imU5UI5594wFUj2A9PgD8JXGY='),
-                              radius: 15,
+                              backgroundImage: AssetImage('assets/ht5.jpg'),
                             ),
                             SizedBox(width: 10),
                             Text(
