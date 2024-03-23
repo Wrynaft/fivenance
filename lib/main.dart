@@ -32,9 +32,9 @@ import 'package:fivenance/pages/CreatePostPage.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-      initialRoute: '/mentor1', //'/get_started',
+      initialRoute: '/get_started',
       routes: {
-        '/home': (context) => Home(), //GetStarted(),
+        '/home': (context) => Home(),
         '/get_started': (context) => GetStarted(),
         '/begin': (context) => Begin(),
         '/editprofile': (context) => EditProfile(),

@@ -278,7 +278,7 @@ class _LoginState extends State<Login> {
         if (_isLoading)
           Positioned.fill(
             child: Container(
-              color: Colors.black.withOpacity(0.5),
+              color: Colors.black.withOpacity(0.7),
               child: Center(
                 child: HourGlassLoadingWidget(),
               ),

@@ -303,7 +303,7 @@ class _SignUpState extends State<SignUp> {
           if (_isLoading)
             Positioned.fill(
               child: Container(
-                color: Colors.black.withOpacity(0.5),
+                color: Colors.black.withOpacity(0.7),
                 child: Center(
                   child: HourGlassLoadingWidget(),
                 ),
