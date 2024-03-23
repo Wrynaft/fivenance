@@ -91,10 +91,8 @@ class _TriviaState extends State<Trivia> {
             ],
           ),
           Positioned(
-            left: 80,
-            top: 480,
-            right: 0,
-            bottom: 0,
+            left: 110,
+            top: 630,
             child: Container(
               color: Colors.transparent,
               child: Center(
