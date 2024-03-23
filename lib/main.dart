@@ -32,7 +32,7 @@ import 'package:fivenance/pages/CreatePostPage.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-      initialRoute: '/get_started',
+      initialRoute: '/trivia', //'/get_started',
       routes: {
         '/home': (context) => Home(),
         '/get_started': (context) => GetStarted(),

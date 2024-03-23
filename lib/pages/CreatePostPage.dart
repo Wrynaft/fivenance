@@ -16,14 +16,13 @@ class CreatePostPages extends StatelessWidget {
               Navigator.of(context).pop();
             },
           ),
-          title: Text(
-              'Create Post',
-              style: TextStyle(color: Colors.white,
+          title: Text('Create Post',
+              style: TextStyle(
+                color: Colors.white,
                 fontFamily: 'AbhayaLibre',
                 fontSize: 38.0,
                 fontWeight: FontWeight.bold,
-              )
-          ),
+              )),
         ),
         body: CreatePostForm(),
       ),
@@ -55,14 +54,13 @@ class _CreatePostFormState extends State<CreatePostForm> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           TextField(
-            controller: _textEditingController,
-            decoration: InputDecoration(
-              hintText: 'Share your thoughts...',
-              hintStyle: TextStyle(color: Colors.white),
-            ),
-            maxLines: null,
-              style: TextStyle(color: Colors.white)
-          ),
+              controller: _textEditingController,
+              decoration: InputDecoration(
+                hintText: 'Share your thoughts...',
+                hintStyle: TextStyle(color: Colors.white),
+              ),
+              maxLines: null,
+              style: TextStyle(color: Colors.white)),
           SizedBox(height: 16.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -111,9 +109,7 @@ class _CreatePostFormState extends State<CreatePostForm> {
                     padding: const EdgeInsets.symmetric(vertical: 8.0),
                     child: Container(
                       padding: EdgeInsets.all(8.0),
-
                       decoration: BoxDecoration(
-
                         color: Colors.white,
                         shape: BoxShape.circle,
                       ),
@@ -145,8 +141,6 @@ class _CreatePostFormState extends State<CreatePostForm> {
               ),
             ),
           ),
-
-
           SizedBox(height: 16.0),
           Spacer(),
           ElevatedButton(
@@ -164,12 +158,13 @@ class _CreatePostFormState extends State<CreatePostForm> {
             ),
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
-              child: Text('Post',  style: TextStyle(color: Colors.white,
-                fontFamily: 'AbhayaLibre',
-                fontSize: 26.0,
-                fontWeight: FontWeight.bold,
-              )
-              ),
+              child: Text('Post',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'AbhayaLibre',
+                    fontSize: 26.0,
+                    fontWeight: FontWeight.bold,
+                  )),
             ),
           ),
         ],
