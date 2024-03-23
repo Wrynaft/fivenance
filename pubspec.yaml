@@ -82,6 +82,9 @@ flutter:
     - family: AbhayaLibre-Regular
       fonts:
         - asset: assets/fonts/AbhayaLibre-Regular.ttf
+    - family: AbhayaLibre-SemiBold
+      fonts:
+        - asset: assets/fonts/AbhayaLibre-SemiBold.ttf
     - family: Judson
       fonts:
         - asset: assets/fonts/Judson-Bold.ttf

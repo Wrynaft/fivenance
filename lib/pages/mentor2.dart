@@ -20,44 +20,64 @@ class _Mentor2State extends State<Mentor2> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    const Column(
-                      children: <Widget>[
-                        Text('Mentorship',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 40)),
-                        Text('Sign Up',
-                            style: TextStyle(
-                                color: Color(0xFFCACACA), fontSize: 40)),
-                      ],
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(40),
-                      alignment: Alignment.center,
-                      child: const Image(
-                        width: 100,
-                        image: AssetImage('assets/Logo.png'),
+                Padding(
+                  padding: EdgeInsets.only(top: 50, left: 8.1),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      const Column(
+                        children: <Widget>[
+                          Text(' Mentorship\n Sign Up',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 40,
+                                  fontFamily: 'AbhayaLibre')),
+                        ],
                       ),
-                    ),
-                  ],
+                      Container(
+                        margin: const EdgeInsets.all(
+                            33), // Adjust margin to fine-tune position
+                        alignment: Alignment.center,
+                        child: const Image(
+                          width: 100,
+                          image: AssetImage('assets/Logo.png'),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Container(
-                    margin:
-                        const EdgeInsets.only(left: 20, right: 20, bottom: 20),
-                    child: const LinearProgressIndicator(
+                  margin:
+                      const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+                  child: SizedBox(
+                    height: 9,
+                    child: LinearProgressIndicator(
+                      borderRadius: BorderRadius.circular(100),
                       value: 0.66,
                       color: Color(0xFF64FF8C),
                       backgroundColor: Color(0xFF523F62),
-                    )),
-                const Center(
-                    child: Text('Page 2: Relevant Qualifications',
-                        style: TextStyle(color: Colors.white, fontSize: 26))),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      left: 20), // Adjust the top padding as needed
+                  child: Text(
+                    'Page 2: Relevant Qualifications',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 26,
+                      fontFamily: 'AbhayaLibre',
+                    ),
+                  ),
+                ),
                 Container(
                     margin: const EdgeInsets.only(left: 20, top: 10),
-                    child: const Text('Certification*',
-                        style: TextStyle(color: Colors.white, fontSize: 15))),
+                    child: const Text('\nCertification*',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontFamily: 'AbhayaLibre-SemiBold'))),
                 Container(
                     margin: const EdgeInsets.all(20),
                     child: const Image(
@@ -67,45 +87,93 @@ class _Mentor2State extends State<Mentor2> {
                     margin: const EdgeInsets.only(left: 20),
                     child: const Text(
                         'Please upload any relevant certificates  that demonstrate your expertise, experience, or completion of training programs to  support your qualifications for mentoring.',
-                        style: TextStyle(color: Colors.white, fontSize: 13))),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 13,
+                            fontFamily: 'AbhayaLibre-SemiBold'))),
                 Container(
                   margin: const EdgeInsets.all(20),
                   child: const TextField(
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'AbhayaLibre-SemiBold'),
                       decoration: InputDecoration(
                         labelText: 'Other:',
-                        labelStyle:
-                            TextStyle(color: Colors.white, fontSize: 15),
+                        labelStyle: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontFamily: 'AbhayaLibre-SemiBold'),
                         hintText:
                             'Other qualifications or training in word form...',
-                        hintStyle: TextStyle(color: Colors.grey, fontSize: 14),
+                        hintStyle: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 14,
+                            fontFamily: 'AbhayaLibre-SemiBold'),
                       )),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(top: 20),
+                  margin: const EdgeInsets.only(top: 5, bottom: 50),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      OutlinedButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        style: OutlinedButton.styleFrom(
-                            side: const BorderSide(color: Color(0xFF6DFF95))),
-                        child: const Text('Back',
-                            style: TextStyle(
-                                fontFamily: 'Judson',
-                                color: Color(0xFF6DFF95),
-                                fontSize: 16)),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Container(
+                            margin: EdgeInsets.only(left: 20, right: 50),
+                            width: 139,
+                            height: 36,
+                            child: OutlinedButton(
+                              onPressed: () {
+                                Navigator.pushNamed(context,
+                                    '/mentor1'); // Navigate to '/home' route
+                              },
+                              style: OutlinedButton.styleFrom(
+                                side: BorderSide(color: Color(0xFF6DFF95)),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                      8), // Rounded corners with a radius of 8
+                                ),
+                              ),
+                              child: Text(
+                                'Back',
+                                style: TextStyle(
+                                  fontFamily: 'Judson',
+                                  color: Color(0xFF6DFF95),
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(right: 20),
+                            width: 139,
+                            height: 36,
+                            child: ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.all<Color>(
+                                        Color(0xFF55E985)), // Background color
+                                shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(
+                                        8), // Rounded corners with a radius of 8
+                                  ),
+                                ),
+                              ),
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/mentor2');
+                              },
+                              child: Text(
+                                'Next',
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 16),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                      const ElevatedButton(
-                          style: ButtonStyle(
-                              backgroundColor:
-                                  MaterialStatePropertyAll(Color(0xFF55E985))),
-                          onPressed: null,
-                          child: Text('Next',
-                              style:
-                                  TextStyle(color: Colors.black, fontSize: 16)))
                     ],
                   ),
                 )

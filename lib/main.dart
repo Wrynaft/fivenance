@@ -13,7 +13,6 @@ import 'package:fivenance/pages/newspage.dart';
 import 'package:fivenance/pages/profile.dart';
 import 'package:fivenance/pages/signup.dart';
 import 'package:fivenance/pages/training.dart';
-import 'package:fivenance/pages/loading.dart';
 import 'package:fivenance/pages/activitylog.dart';
 import 'package:fivenance/pages/triviareport.dart';
 import 'package:fivenance/pages/rewards.dart';
@@ -33,7 +32,7 @@ import 'package:fivenance/pages/CreatePostPage.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-      initialRoute: '/get_started',
+      initialRoute: '/mentor1', //'/get_started',
       routes: {
         '/home': (context) => Home(), //GetStarted(),
         '/get_started': (context) => GetStarted(),
@@ -66,6 +65,5 @@ void main() => runApp(MaterialApp(
         '/triviarecord': (context) => TriviaRecord(),
         '/trivia': (context) => Trivia(),
         '/triviaanswer': (context) => TriviaAnswer(),
-  },
-
+      },
     ));
